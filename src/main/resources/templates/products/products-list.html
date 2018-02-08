@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <th:block th:include="layout/headGlobal :: head"/>
+    <th:block th:include="layout/headDataTables :: head"/>
+    <title>Products</title>
+</head>
+<body>
+<div class="container_48">
+    <div class="contenedor">
+        <div class="contenedor-form">
+            <div class="titulo centrar-objeto btn-inline-set">
+                <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only"
+                        onclick="parent.regresarMenuFrecuente();" type="submit" role="button" aria-disabled="false">
+                    <span class="ui-button-icon-left ui-icon ui-c ui-icon-arrow-1-w"></span>
+                    <span class="ui-button-text ui-c">ui-button</span></button>
+                <div>
+                    <h2 class="gris-b">Menu</h2>
+                </div>
+            </div>
+            <div class="contenedor-campos">
+                <div class="row-flex">
+                    <div class="grid_48">
+                        <h3>Products List</h3>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Image url</th>
+                            <th>Options</th>
+                        </tr>
+                        <tr th:each="product: ${productsDto}">
+                            <td th:text="${product.id}">123</td>
+                            <td th:text="${product.name}">Name</td>
+                            <td th:text="${product.description}">Description test</td>
+                            <td th:text="${product.price}">12.44</td>
+                            <td th:text="${product.imageUrl}">https://example.com</td>
+                            <td>
+                                <form method="post" th:action="@{/products/{id}(id=${product.id})}">
+                                    <input type="hidden" name="_method" value="DELETE"/>
+                                    <input type="submit" value="Delete"/>
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

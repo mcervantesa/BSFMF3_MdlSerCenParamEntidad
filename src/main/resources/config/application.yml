@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active:
+      nodataservice,
+      development
+  config:
+    location: /src/main/resources/config
+server:
+  port: 8082
+  servlet:
+    context-path: /BsfRemesasInternacionales
+banner:
+  location: banner.txt
+logging:
+  config: src/main/resources/config/logback-spring.xml

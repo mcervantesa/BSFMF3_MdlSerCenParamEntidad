@@ -1,0 +1,10 @@
+esb:
+  context: http://172.26.9.65:8288/wsBsfOperacionesSucursales
+  services:
+    encryption: ${esb.context}/encrypt
+    decryption: ${esb.context}/decrypt
+as:
+  context: http://172.26.9.65:9766/wsBsfOperacionesSucursales
+  services:
+    encryption: ${esb.context}/encrypt
+    decryption: ${esb.context}/decrypt

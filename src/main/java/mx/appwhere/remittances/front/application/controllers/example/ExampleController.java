@@ -1,12 +1,11 @@
 package mx.appwhere.remittances.front.application.controllers.example;
 
 import mx.appwhere.remittances.front.application.constants.ApplicationConstants;
+import mx.appwhere.remittances.front.application.dto.ejemplo.EjemploDto;
 import mx.appwhere.remittances.front.domain.services.main.MainService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
@@ -28,5 +27,10 @@ public class ExampleController {
     @PostMapping(params = "TRANSPORT", produces = ApplicationConstants.VIEWS_PRODUCE_HTML)
     public ModelAndView getView2(@RequestParam("TRANSPORT") String transportEncrypt) {
         return mainService.getMainTranport(transportEncrypt);
+    }
+
+    @GetMapping(value = "converter", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public EjemploDto utilizarConverter() {
+        return mainService.utilizarConverter();
     }
 }

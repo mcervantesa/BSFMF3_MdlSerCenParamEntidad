@@ -46,7 +46,7 @@ public class BsfOperadorServiceImpl implements BsfOperadorService {
                             this.util.jsonToObject(bsfOperadorContainerDto,bsfOperadorJson);
             return bsfOperadorContainerDto.getBSFOPERADOR();
         } catch (Exception e) {
-            throw new BsfOperadorException(ServiceMessages.BSFOPERADOR_ERROR, ViewsLocation.MAIN_VIEW);
+            throw new BsfOperadorException(ServiceMessages.BSFOPERADOR_ERROR);
         }
     }
 

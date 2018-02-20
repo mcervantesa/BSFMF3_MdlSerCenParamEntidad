@@ -1,8 +1,11 @@
 package mx.appwhere.remittances.front.application.serviceimpl.main;
 
 import mx.appwhere.remittances.front.application.constants.ViewsLocation;
+import mx.appwhere.remittances.front.application.dto.ejemplo.EjemploDto;
 import mx.appwhere.remittances.front.application.dtoBackend.bsfOperador.BsfOperadorDto;
+import mx.appwhere.remittances.front.application.dtoBackend.encryptionDecryption.EncryptionDecryptionResponseDto;
 import mx.appwhere.remittances.front.domain.services.BsfOperadorService;
+import mx.appwhere.remittances.front.domain.services.ConverterService;
 import mx.appwhere.remittances.front.domain.services.main.MainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,6 +19,12 @@ public class MainServiceImpl implements MainService {
     private String uriDigitalizacion;
     private BsfOperadorService bsfOperadorService;
     private String digitalizacion = "ig6bpA59BmxGAIwqUPcX5SRRxl3om/4vKuu6jFTBSvU5gKmGr1uJw8UtEY0a81/ln/qt7jxIHGE9hcv8i60x9l3wMLwI0JzXABXqlKpSRnAjEZyjRb3Gw9pX9RD79azdVLMxK77tK+V9DMxQrXQyXzcdZYZfFAZdAv46EBax9n2RQeDMm/YyZ4nWfPcM4mkXP3Nbrl7+W7AyLIxZJsfjPAcsjDwPk6LODqB+2Igq+qJUWQd1Q+8DOdq3ITGxkyIHaiptUThyiP5LsDt0Lk2LhJViS+gguFhWGwfSvg3gtH0lbNDqHnWd/ryTAt0fXzbYNiJ82hA5nxKCVG4VEfcGefu9qcFxcqRd4pOs13p6sJN8scY3gPAp8clP09GDI7KzQQEpCP5laRlQUFz92e7K2j9HhbrYQexRzj8ZEZfOf7fWGHEsIO84ax6tdVT4fH7vLt9aoHWk5vluxKjJlLOLlHqyIeUZRuQrxWRqN4J/6WN/Bi+68coYJfZs5egDiXK0y4ORPULj7zIKAjCOCTnfLnbShp46qNW5+E+y9HD3ulPzOEPKqkTBdnRXEH9acF82rlIG90i/R787bCK93gyzKoD4WQh6UpU6GEM9Kp02zCaYJC/OA3eEujRMI9l3fSMGV0zKidxo9+iA2ozkPPR4MNi7PYupdsghHVchsvU5VrUbJGKocQ2oIZDsihsyJn+mlhHLN8tmVCwmsa9Pq2uL6y0i1c+6V7fFiHrrG+TYQXI=";
+    private ConverterService converterService;
+
+    @Autowired
+    public void setConverterService(ConverterService converterService) {
+        this.converterService = converterService;
+    }
 
     @Autowired
     public void setBsfOperadorService(BsfOperadorService bsfOperadorService) {
@@ -43,5 +52,12 @@ public class MainServiceImpl implements MainService {
         mav.addObject("transport", digitalizacion);
         mav.addObject("doc", bsfOperadorDto.getTRANSPORT().getIDDOCUMENTO());
         return mav;
+    }
+
+    @Override
+    public EjemploDto utilizarConverter() {
+        EncryptionDecryptionResponseDto encryptionDecryptionResponseDto =
+                new EncryptionDecryptionResponseDto("123", "", "Appwhere");
+        return converterService.convert(encryptionDecryptionResponseDto, EjemploDto.class);
     }
 }

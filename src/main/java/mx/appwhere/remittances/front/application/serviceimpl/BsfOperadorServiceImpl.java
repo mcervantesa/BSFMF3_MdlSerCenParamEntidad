@@ -59,9 +59,10 @@ public class BsfOperadorServiceImpl implements BsfOperadorService {
     @Override
     public String encryptBsfOperador(BsfOperadorDto bsfOperadorDto) {
         try {
-            return this.util.objectToJson(bsfOperadorDto);
+            return this.encryptionDecryptionService.encrypt(this.util.objectToJson(bsfOperadorDto))
+                    .getRespuesta();
         } catch (Exception ex) {
-            throw new BsfOperadorException(ServiceMessages.BSFOPERADOR_ERROR, ViewsLocation.MAIN_VIEW);
+            throw new BsfOperadorException(ServiceMessages.BSFOPERADOR_ERROR);
         }
     }
 

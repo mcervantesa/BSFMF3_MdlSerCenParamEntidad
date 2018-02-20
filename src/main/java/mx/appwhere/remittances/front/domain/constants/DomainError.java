@@ -22,6 +22,14 @@ public enum DomainError {
      * Connection error
      */
     CONNECTION_ERROR(702),
+    /**
+     * Esb error
+     */
+    ESB_ERROR(703),
+    /**
+     * As error
+     */
+    AS_ERROR(704),
 
     /**
      * This field is to mark the end of the enum.

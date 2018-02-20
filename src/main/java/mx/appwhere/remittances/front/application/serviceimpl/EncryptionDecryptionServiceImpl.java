@@ -3,6 +3,8 @@ package mx.appwhere.remittances.front.application.serviceimpl;
 import mx.appwhere.remittances.front.application.constants.messages.ServiceMessages;
 import mx.appwhere.remittances.front.application.dtoBackend.encryptionDecryption.EncryptionDecryptionResponseDto;
 import mx.appwhere.remittances.front.application.dtoBackend.encryptionDecryption.EncryptionDecryptionRequestDto;
+import mx.appwhere.remittances.front.domain.constants.DomainError;
+import mx.appwhere.remittances.front.domain.exceptions.AplicationServiceException;
 import mx.appwhere.remittances.front.domain.exceptions.ConnectionException;
 import mx.appwhere.remittances.front.domain.exceptions.RestResponseException;
 import mx.appwhere.remittances.front.domain.services.EncryptionDecryptionService;
@@ -12,6 +14,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
+
+import java.util.Objects;
 
 @Service
 public class EncryptionDecryptionServiceImpl implements EncryptionDecryptionService {
@@ -46,6 +50,16 @@ public class EncryptionDecryptionServiceImpl implements EncryptionDecryptionServ
                     new EncryptionDecryptionRequestDto(textToEncrypt),
                     EncryptionDecryptionResponseDto.class);
         } catch (RestResponseException ex) {
+            ex.getApiError().ifPresent(apiError -> {
+                if (Objects.nonNull(apiError.getErrorCode())) {
+                    DomainError.getDomainError(apiError.getErrorCode()).ifPresent(domainError -> {
+                        if (domainError.equals(DomainError.ESB_ERROR)) {
+                            throw new AplicationServiceException(
+                                    ServiceMessages.ESB_ERROR);
+                        }
+                    });
+                }
+            });
             throw new ConnectionException(ServiceMessages.CONNECTION_ERROR);
         }
     }
@@ -65,6 +79,16 @@ public class EncryptionDecryptionServiceImpl implements EncryptionDecryptionServ
                     new EncryptionDecryptionRequestDto(textToDecrypt),
                     EncryptionDecryptionResponseDto.class);
         } catch (RestResponseException ex) {
+            ex.getApiError().ifPresent(apiError -> {
+                if (Objects.nonNull(apiError.getErrorCode())) {
+                    DomainError.getDomainError(apiError.getErrorCode()).ifPresent(domainError -> {
+                        if (domainError.equals(DomainError.ESB_ERROR)) {
+                            throw new AplicationServiceException(
+                                    ServiceMessages.ESB_ERROR);
+                        }
+                    });
+                }
+            });
             throw new ConnectionException(ServiceMessages.CONNECTION_ERROR);
         }
     }

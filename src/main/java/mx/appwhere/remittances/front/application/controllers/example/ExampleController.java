@@ -2,6 +2,7 @@ package mx.appwhere.remittances.front.application.controllers.example;
 
 import mx.appwhere.remittances.front.application.constants.ApplicationConstants;
 import mx.appwhere.remittances.front.application.dto.ejemplo.EjemploDto;
+import mx.appwhere.remittances.front.domain.exceptions.ViewException;
 import mx.appwhere.remittances.front.domain.services.main.MainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -32,5 +33,10 @@ public class ExampleController {
     @GetMapping(value = "converter", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public EjemploDto utilizarConverter() {
         return mainService.utilizarConverter();
+    }
+
+    @GetMapping(value = "get500", produces = ApplicationConstants.VIEWS_PRODUCE_HTML)
+    public String get500() {
+        throw new ViewException("hola nuevo error 500");
     }
 }

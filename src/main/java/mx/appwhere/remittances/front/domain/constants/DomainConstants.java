@@ -9,7 +9,7 @@ public final class DomainConstants {
     /**
      * Default name for error view
      */
-    public static final String ERROR_VIEW_NAME = "error";
+    public static final String ERROR_VIEW_NAME = "error/500";
 
     public static final String MODEL_NAME = "model";
 

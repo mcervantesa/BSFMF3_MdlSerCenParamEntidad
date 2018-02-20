@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
     <th:block th:include="layout/headGlobal :: head"/>
@@ -29,7 +29,6 @@
                                 </div>
                                 <div class="grid_24">
                                     <select name="opcion" class="form-control" id="option">
-                                        <option th:value="@{/products/list}">Prueba</option>
                                         <option th:value="@{/example}">Example</option>
                                     </select>
                                 </div>

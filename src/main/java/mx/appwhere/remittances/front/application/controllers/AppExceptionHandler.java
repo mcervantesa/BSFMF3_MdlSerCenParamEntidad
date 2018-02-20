@@ -48,7 +48,9 @@ public class AppExceptionHandler {
             ex.getModel().addAttribute(ApplicationConstants.VIEW_MESSAGE_NAME, ex.getMessage());
             return new ModelAndView(ex.getView(), ex.getModel().asMap());
         } else {
-            return new ModelAndView(ex.getView());
+            ModelAndView mav = new ModelAndView(ex.getView());
+            mav.addObject(ApplicationConstants.VIEW_MESSAGE_NAME, ex.getMessage());
+            return mav;
         }
     }
 

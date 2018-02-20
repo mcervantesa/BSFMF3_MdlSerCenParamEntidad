@@ -1,6 +1,6 @@
 package mx.appwhere.remittances.front.application.converters;
 
-import mx.appwhere.remittances.front.application.dto.bsfoperador.BsfOperadorDto;
+import mx.appwhere.remittances.front.application.dto.bsfoperador.BsfOperadorDTO;
 import mx.appwhere.remittances.front.domain.entities.encryption.BsfOperadorProperties;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
@@ -12,11 +12,11 @@ import java.util.Objects;
  * @version 1.0 - 2017/10/27
  */
 @Component
-public class BsfOperadorPropertiesToBsfOperadorDto extends AbstractConverter<BsfOperadorProperties, BsfOperadorDto> {
+public class BsfOperadorPropertiesToBsfOperadorDto extends AbstractConverter<BsfOperadorProperties, BsfOperadorDTO> {
 
     @Override
-    public BsfOperadorDto convert(BsfOperadorProperties bsfOperadorProperties) {
+    public BsfOperadorDTO convert(BsfOperadorProperties bsfOperadorProperties) {
         Objects.requireNonNull(bsfOperadorProperties, "bsfOperadorProperties must not be null");
-        return modelMapper.map(bsfOperadorProperties, BsfOperadorDto.class);
+        return modelMapper.map(bsfOperadorProperties, BsfOperadorDTO.class);
     }
 }

@@ -26,4 +26,7 @@ public final class ApplicationConstants {
     public static final String PRODUCTS_ID_VIEW = "products/products-show.html";
     public static final String PRODUCTS_NEW_VIEW = "products/products-new.html";
     public static final String PRODUCTS_EDIT_VIEW = "products/products-edit.html";
+
+    //Example
+    public static final String EXAMPLE_VIEW = "example/example.html";
 }

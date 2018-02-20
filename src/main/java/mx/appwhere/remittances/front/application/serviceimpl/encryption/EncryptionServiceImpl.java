@@ -26,10 +26,10 @@ public class EncryptionServiceImpl implements EncryptionService {
     private RestClient restClient;
     private ObjectMapper objectMapper;
 
-    @Value("${esb.wso2.encrypt}")
+    @Value("${wso2.esb.wsBsfOperacionesSucursales.encrypt}")
     private String encryptionServiceUri;
 
-    @Value("${esb.wso2.decrypt}")
+    @Value("${wso2.esb.wsBsfOperacionesSucursales.decrypt}")
     private String decryptionServiceUri;
 
     @Autowired

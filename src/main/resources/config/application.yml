@@ -1,7 +1,6 @@
 spring:
   profiles:
     active:
-      nodataservice,
       development
   config:
     location: /src/main/resources/config

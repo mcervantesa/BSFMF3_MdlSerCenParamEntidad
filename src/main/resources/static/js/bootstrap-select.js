@@ -249,7 +249,7 @@
   }
 
 
-  // List of HTML entities for escaping.
+  // List of HTML dtoBackend for escaping.
   var escapeMap = {
     '&': '&amp;',
     '<': '&lt;',

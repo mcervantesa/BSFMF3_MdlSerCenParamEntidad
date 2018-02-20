@@ -12,65 +12,23 @@ jboss:
 
 wso2:
   scheme: http
-  host: 172.26.9.65
-  port: 8288
   esb:
+    host: 172.26.9.65
+    port: 8288
     wsBsfDigitalizacion:
       context-path: /wsBsfDigitalizacion
-      identificationImage: ${wso2.scheme}://${wso2.host}:${wso2.port}${wso2.esb.wsBsfDigitalizacion.context-path}/ConsultaDocumentoId
+      identificationImage: ${wso2.scheme}://${wso2.esb.host}:${wso2.esb.port}${wso2.esb.wsBsfDigitalizacion.context-path}/ConsultaDocumentoId
     wsBsfOperacionesSucursales:
       context-path: /wsBsfOperacionesSucursales
-      encrypt: ${wso2.scheme}://${wso2.host}:${wso2.port}${wso2.esb.wsBsfOperacionesSucursales.context-path}/encrypt
-      decrypt: ${wso2.scheme}://${wso2.host}:${wso2.port}${wso2.esb.wsBsfOperacionesSucursales.context-path}/decrypt
-
-# remittances back end services
-remittances-back:
-  scheme: http
-  host: localhost
-  port: 8090
-  context-path: /bsf-national-remittances
-  uri: ${remittances-back.scheme}://${remittances-back.host}:${remittances-back.port}${remittances-back.context-path}
-  services:
-    remittances:
-      context-path: /remittances
-      uri: ${remittances-back.uri}${remittances-back.services.remittances.context-path}
-    payments:
-      context-path: /payments
-      uri: ${remittances-back.uri}${remittances-back.services.payments.context-path}
-      cash:
-        context-path: /cash
-        uri: ${remittances-back.services.payments.uri}${remittances-back.services.payments.cash.context-path}
-      accounts:
-        context-path: /accounts
-        uri: ${remittances-back.services.payments.uri}${remittances-back.services.payments.accounts.context-path}
-        authorize:
-         uri: ${remittances-back.services.payments.uri}/accounts/{account}/authorize
-    products:
-      context-path: /products
-      uri: ${remittances-back.uri}${remittances-back.services.products.context-path}
-    remittance-agencies:
-      create:
-        context-path: /remittance-agencies
-        uri: ${remittances-back.uri}${remittances-back.services.remittance-agencies.create.context-path}
-    reference-data:
-      context-path: /reference-data
-      uri: ${remittances-back.uri}${remittances-back.services.reference-data.context-path}
-      states:
-        context-path: /states
-        uri: ${remittances-back.services.reference-data.uri}${remittances-back.services.reference-data.states.context-path}
-      nationalities:
-        uri: ${remittances-back.services.reference-data.uri}/nationalities
-      identifications:
-        uri: ${remittances-back.services.reference-data.uri}/identifications
-      localities:
-        uri: ${remittances-back.services.reference-data.uri}/localities/byPostalCode
-      occupations:
-        uri: ${remittances-back.services.reference-data.uri}/occupations
-      countries:
-        uri: ${remittances-back.services.reference-data.uri}/countries
-      municipios:
-        uri: ${remittances-back.services.reference-data.uri}/municipios
-
-
-
-
+      encrypt: ${wso2.scheme}://${wso2.esb.host}:${wso2.esb.port}${wso2.esb.wsBsfOperacionesSucursales.context-path}/encrypt
+      decrypt: ${wso2.scheme}://${wso2.esb.host}:${wso2.esb.port}${wso2.esb.wsBsfOperacionesSucursales.context-path}/decrypt
+  as:
+    host: 172.26.9.65
+    port: 9766
+    war1:
+      context-path: /war1
+      funcionalidad1: ${wso2.scheme}://${wso2.as.host}:${wso2.as.port}${wso2.as.war1.context-path}/funcionalidad1
+      funcionalidad2: ${wso2.scheme}://${wso2.as.host}:${wso2.as.port}${wso2.as.war1.context-path}/funcionalidad2
+    war2:
+      context-path: /war2
+      funcionalidad1: ${wso2.scheme}://${wso2.as.host}:${wso2.as.port}${wso2.as.war2.context-path}/funcionalidad1

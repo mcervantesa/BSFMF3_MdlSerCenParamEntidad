@@ -2,7 +2,7 @@ package mx.appwhere.remittances.front.application.converters.product;
 
 import mx.appwhere.remittances.front.application.converters.ConverterTest;
 import mx.appwhere.remittances.front.application.dto.product.ProductDto;
-import mx.appwhere.remittances.front.domain.entities.product.Product;
+import mx.appwhere.remittances.front.application.dtoBackend.product.Product;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;

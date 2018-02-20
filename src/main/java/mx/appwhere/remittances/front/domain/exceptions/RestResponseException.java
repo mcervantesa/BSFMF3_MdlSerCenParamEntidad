@@ -1,8 +1,7 @@
 package mx.appwhere.remittances.front.domain.exceptions;
 
-import mx.appwhere.remittances.front.domain.entities.ApiError;
+import mx.appwhere.remittances.front.application.dtoBackend.ApiError;
 
-import java.util.Objects;
 import java.util.Optional;
 
 /**

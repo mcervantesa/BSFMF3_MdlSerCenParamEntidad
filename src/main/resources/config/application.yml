@@ -7,7 +7,7 @@ spring:
 server:
   port: 8082
   servlet:
-    context-path: /BsfRemesasInternacionales
+    context-path: /BsfBase
 banner:
   location: banner.txt
 logging:

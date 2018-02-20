@@ -3,11 +3,8 @@ package mx.appwhere.remittances.front.domain.exceptions.ajax;
 import mx.appwhere.remittances.front.domain.constants.DomainError;
 import mx.appwhere.remittances.front.domain.exceptions.DomainException;
 
-import java.util.Objects;
-import java.util.Optional;
-
 /**
- * Exception for handle the {@link mx.appwhere.remittances.front.domain.entities.ApiError} received from the server.
+ * Exception for handle the {@link mx.appwhere.remittances.front.application.dtoBackend.ApiError} received from the server.
  *
  * @author Alejandro Martin
  * @version 1.0 - 2017/10/13
@@ -21,7 +18,7 @@ public class AjaxException extends DomainException {
 
     /**
      * Exception details. When the exception is mapped to an
-     * {@link mx.appwhere.remittances.front.domain.entities.ApiError}
+     * {@link mx.appwhere.remittances.front.application.dtoBackend.ApiError}
      * the details objects is appended.
      */
     private Object details;

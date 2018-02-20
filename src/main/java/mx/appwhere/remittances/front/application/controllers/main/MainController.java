@@ -1,6 +1,7 @@
 package mx.appwhere.remittances.front.application.controllers.main;
 
 import mx.appwhere.remittances.front.application.constants.ApplicationConstants;
+import mx.appwhere.remittances.front.application.constants.ViewsLocation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,9 +22,9 @@ public class MainController {
      * Inputs -
      * @return ModelAndView hacia el archivo HTML /main/main.html
      */
-    @GetMapping(produces = "text/html; charset=UTF-8")
+    @GetMapping(produces = ApplicationConstants.VIEWS_PRODUCE_HTML)
     public ModelAndView getMainView() {
-        ModelAndView mav = new ModelAndView(ApplicationConstants.MAIN_VIEW);
+        ModelAndView mav = new ModelAndView(ViewsLocation.MAIN_VIEW);
         mav.addObject("BSFOPERADOR", bsfOperador);
         return mav;
     }

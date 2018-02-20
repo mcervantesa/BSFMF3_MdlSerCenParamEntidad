@@ -2,7 +2,8 @@ package mx.appwhere.remittances.front.application.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import mx.appwhere.remittances.front.domain.exceptions.RestResponseException;
-import mx.appwhere.remittances.front.domain.entities.ApiError;
+import mx.appwhere.remittances.front.application.dtoBackend.ApiError;
+import mx.appwhere.remittances.front.domain.util.RestClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,6 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestClientResponseException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
-
-import java.io.IOException;
 
 /**
  * Client for consuming rest api.
@@ -106,6 +105,12 @@ public class RestClientImpl implements RestClient {
     public <T> T post(UriComponents uriComponents, HttpHeaders httpHeaders, @Nullable Object request, Class<T> responseType)
             throws RestResponseException {
         return request(uriComponents, HttpMethod.POST, httpHeaders, request, responseType);
+    }
+
+    @Override
+    public <T> T post(UriComponents uriComponents, @Nullable Object request, Class<T> responseType)
+            throws RestResponseException {
+        return request(uriComponents, HttpMethod.POST, new HttpHeaders(), request, responseType);
     }
 
     @Override

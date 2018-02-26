@@ -7,4 +7,7 @@ public final class ViewsLocation {
 
     //Example
     public static final String EXAMPLE_VIEW = "example/example.html";
+    
+    //
+    public static final String PERIODOS_VIEW = "acuerdos/periodos.html";
 }

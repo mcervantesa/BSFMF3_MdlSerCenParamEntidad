@@ -14,8 +14,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static mx.appwhere.remittances.front.application.constants.ApplicationConstants.FORMATO_NUMERO_MUY_LARGO;
-
 /**
  * @author Arturo Pérez
  * @version 1.0
@@ -40,7 +38,7 @@ public class ExceptionController {
             for (FieldError error : err) {
                 if(error.getDefaultMessage() != null) {
                     if (error.getDefaultMessage().contains("java.lang.NumberFormatException")) {
-                        errors.put(error.getField(), FORMATO_NUMERO_MUY_LARGO);
+                       //CE234 errors.put(error.getField(), FORMATO_NUMERO_MUY_LARGO);
                     }else {
                         errors.put(error.getField(), error.getDefaultMessage());
                     }

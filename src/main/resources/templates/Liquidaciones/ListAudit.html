@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<th:block th:include="layout/headGlobal :: head"></th:block>
+	<th:block th:include="layout/headTable :: head"></th:block>
+	<script th:src="@{/js/views/listAudit.js}"></script>
+	<meta charset="UTF-8"/>
+</head>
+<body>
+
+<div class="container_48">
+		<div class="contenedor">
+			<div class="contenedor-form">
+				<!-- Begin Title -->
+				<th:block th:include="layout/HeadTitle :: TitleHead"></th:block>	
+				<!-- End Title -->
+				
+				<!-- Begin Content -->
+				<div class="row">
+					<div class="col-sm-1">					</div>
+					<div class="col-sm-10 CuadroMarco">
+						<br />
+						
+						<table>
+							<tr>
+								<td style="width:75%"></td>
+								<td style="width:5%"></td>
+								<td style="width:20%"></td>
+							</tr>
+							<tr>
+								<td>
+														<table id="tblListAut">
+							<thead >
+								<tr>
+									<th>Código Transacción</th>
+									<th>Centro</th>
+									<th>Fecha Contable</th>
+									<th>Empleado Originador</th>
+									<th>Empleado Autorizador</th>
+									<th>Terminal</th>
+									<th>Fecha Operación</th>
+									<th>Hora Operación</th>
+									<th>Situación</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>aaaaa</td>
+									<td>aaaaa</td>
+									<td>aaaaa</td>
+									<td>aaaaa</td>
+									<td>aaaaa</td>
+									<td>aaaaa</td>
+									<td>aaaaa</td>
+									<td>aaaaa</td>
+									<td>aaaaa</td>
+								</tr>
+							</tbody>
+						</table>
+								</td>
+							<td></td>
+							<td>
+							
+							<button id="BtnExport" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Exportar</span>
+					 				</button>
+					 				<br />
+					 				<button id="BtnVer" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Ver</span>
+					 				</button>
+							
+							</td>
+							</tr>
+						</table>
+						
+<table>
+							<tr>
+									<td style="width:60%"></td>
+									<td style="width:10%"></td>
+									<td style="width:2%"></td>
+									<td style="width:10%"></td>
+									<td style="width:2%"></td>
+									<td style="width:10%"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+													
+								</td>
+								<td></td>
+								<td>
+									<button id="BtnPrint" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Imprimir</span>
+					 				</button>
+								</td>
+								<td></td>
+								<td>
+									<form id="frmBack" method="post">
+										<button id="BtnBack" class="ui-button ui-widget ui-state-default ui-corner-all
+													ui-button-text-only  margin-top-10"
+												type="button" role="button" aria-disabled="false">
+											<span class="ui-button-text ui-c">Anterior</span>
+						 				</button>
+									</form>
+									
+								</td>
+							</tr>
+						</table>
+<br /><br />
+					</div>
+				</div>		
+				<!-- End Content -->
+			</div>
+		</div>
+</div>		
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<th:block th:include="layout/headGlobal :: head"></th:block>
+	<th:block th:include="layout/headTable :: head"></th:block>
+	<script th:src="@{/js/views/liquidaciones.js}"></script>
+	<meta charset="UTF-8"/>
+
+</head>
+<body>
+		<th:block th:include="Messages/alertaError :: alerta"></th:block>
+		<th:block th:include="Messages/alertaExito :: alerta"></th:block>
+		<th:block th:include="Messages/alertaConfirmacion :: alerta"></th:block>
+
+<div class="container_48">
+		<div class="contenedor">
+			<div class="contenedor-form">
+				<!-- Begin Title -->
+				<th:block th:include="layout/HeadTitle :: TitleHead"></th:block>	
+				<!-- End Title -->
+				
+				<!-- Begin Content -->
+				<div class="row">
+					<div class="col-sm-1">					</div>
+					<div class="col-sm-10 CuadroMarco">
+						<table>
+							<tr>
+									<td style="width:5%;height:10px;"></td>
+							 		<td style="width:15%"></td>
+							 		<td style="width:1%"></td>
+							 		<td style="width:15%"></td>
+							 		<td style="width:1%"></td>
+							 		<td style="width:15%"></td>
+							 		<td style="width:1%"></td>
+							 		<td style="width:15%"></td>
+							 		<td style="width:2%"></td>
+							 		<td style="width:15%"></td>
+							</tr>
+							<tr>
+								<td colspan="9"></td>
+								<td>
+									<!-- Begin Boton  -->
+									<div class="btn-group">
+									  <button type="button" id="BtnOpc" class="btn btn-default dropdown-toggle"
+									          data-toggle="dropdown">
+									    <span class="glyphicon glyphicon-align-justify"></span> Menú 
+									  </button>
+									  <ul class="dropdown-menu" role="menu">
+									  	<li><span class="label_gris"><a href="#">Auditoria</a> </span> </li>
+									  </ul>
+									</div>
+									<!-- End Boton -->																		
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td align="right">Línea</td>
+								<td></td>
+								<td><select class="form-control"></select></td>
+								<td colspan="2"></td>
+								<th rowspan="3">
+	    							<button  type="button" id="btnFindLiq"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left btn-consultar" 
+	    								role="button" aria-disabled="true">
+										<span class="ui-button-icon-left ui-icon ui-c fa fa-search"></span>
+										<span class="ui-button-text ui-c">Buscar</span>
+									</button>
+    							</th>
+							</tr>
+							<tr>
+								<td></td>
+								<td align="right">Grupo</td>
+								<td></td>
+								<td><select class="form-control"></select></td>
+								<td></td>
+								<td>
+								 <button id="btnFindAcuerdo" class="ui-button ui-widget ui-state-default ui-corner-all
+						             ui-button-icon-only btn-icono-conbackground"
+						             alt="Buscar acuerdo" title="" type="submit" role="button" aria-disabled="false"
+						             oldtitle="Buscar Acuerdo" aria-describedby="ui-tooltip-2">
+						             <span class="ui-button-icon-left ui-icon ui-c ui-icon-search"></span>
+						             <span class="ui-button-text ui-c">ui-button</span>
+						        </button>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td align="right">Código Relación</td>
+								<td></td>
+								<td><select class="form-control"></select></td>
+							</tr>
+						</table>
+						
+						<table>
+							<tr>
+								<td style="width:85%"></td>
+								<td style="width:15%"></td>
+							</tr>
+							<tr>
+								<td>
+									<div id="divBusqLiqu"></div>		
+								</td>
+								<td>
+									<button id="BtnExport" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Exportar</span>
+					 				</button>
+					 				<br />
+					 				<button id="BtnSelect" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Seleccionar</span>
+					 				</button>
+								</td>
+							</tr>
+						</table>
+						
+						<table>
+							<tr>
+								<td style="width:5%"></td>
+								<td style="width:15%"></td>
+								<td style="width:5%"></td>
+								<td style="width:25%"></td>
+								<td style="width:5%"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Parámetro:</td>
+								<td></td>
+								<td>
+								<input id="txtHrLimReg" type="text" disabled="disabled"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+								</td>
+								<td></td>
+								<td>
+								<input id="txtHrLimReg" type="text" disabled="disabled" class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+								</td>
+							</tr>
+						</table>
+						
+						<fieldset >
+							 <legend > Valor </legend>
+							 <table>
+							 	<tr>
+							 		<td style="width:2%"></td>
+									<td style="width:8%"></td>
+									<td style="width:3%"></td>
+									<td style="width:10%"></td>
+									<td style="width:5%"></td>
+									<td style="width:15%"></td>
+									<td style="width:5%"></td>
+									<td style="width:15%"></td>
+							 	</tr>
+							 	<tr>
+							 		<td></td>
+							 		<td>Decisión</td>
+							 		<td></td>
+							 		<td>
+							 			<select class="form-control"></select>
+							 		</td>
+							 		<td></td>
+							 		<td>
+							 			<input id="txtHrLimReg" type="text" disabled="disabled" class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+							 		</td>
+							 		<td></td>
+							 		<td>Interés</td>
+							 		<td></td>
+							 		<td>
+							 			<input id="txtHrLimReg" type="text" disabled="disabled" class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+							 		</td>
+							 		<td></td>
+							 		<td>Límite</td>
+							 		<td></td>
+							 		<td>
+							 			<input id="txtHrLimReg" type="text" disabled="disabled" class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+							 		</td>
+							 	</tr>
+							 </table>
+						</fieldset>	 
+						
+						<table>
+							<tr>
+									<td style="width:60%"></td>
+									<td style="width:10%"></td>
+									<td style="width:2%"></td>
+									<td style="width:10%"></td>
+									<td style="width:2%"></td>
+									<td style="width:10%"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<button id="BtnClear" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Limpiar</span>
+					 				</button>					
+								</td>
+								<td></td>
+								<td>
+									<button id="BtnPrint" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Imprimir</span>
+					 				</button>
+								</td>
+								<td></td>
+								<td>
+									<button id="BtnSave" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Guardar</span>
+					 				</button>
+								</td>
+							</tr>
+						</table>
+						<br/>
+					</div>
+				</div>	
+				<!-- End Content -->
+				
+				
+				<!-- Begin Content -->
+				<div class="row">
+					<div class="col-sm-1">					</div>
+					<div class="col-sm-3">					
+						<button id="btnClos" class="ui-button ui-widget ui-state-default ui-corner-all
+														ui-button-text-only btn_secundario margin-top-10"
+														style="left:-10px"
+													type="button" role="button" aria-disabled="false">
+												<span class="ui-button-text ui-c">Salir</span>
+						</button>
+					</div>
+				</div>	
+				<!-- End Content -->
+			</div>
+		</div>
+<div id="DivPrint"></div>		
+</div>				
+</body>
+</html>

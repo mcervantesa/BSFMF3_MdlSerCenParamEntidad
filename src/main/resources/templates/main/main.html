@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <th:block th:include="layout/headGlobal :: head"/>
-    <th:block th:include="layout/headDataTables :: head"/>
+    <th:block th:include="layout/headDataTableExport :: head"/>
     <title>Menú</title>
 </head>
 <body>
@@ -32,6 +32,10 @@
                                         <option th:value="@{/example}">Example</option>
                                         <option th:value="@{/periodos}">Periodo</option>
                                         <option th:value="@{/cajacentraliz}">cajacentraliz</option>
+                                        <option th:value="@{/liquidaciones}">Liquidaciones</option>
+                                        <option th:value="@{/ListAudLiquid}">Lista Auditoria Liquidacion</option>
+                                        <option th:value="@{/ListAudit}">Lista Auditoria </option>
+                                        <option th:value="@{/ConsAudit}">Consulta Auditoria </option>
                                     </select>
                                 </div>
                             </div>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<th:block th:include="layout/headGlobal :: head"></th:block>
+	<script th:src="@{/js/views/CajaCentraliz.js}"></script>
+	<meta charset="UTF-8"/>
+
+</head>
+<body>
+
+		<th:block th:include="Messages/alertaError :: alerta"></th:block>
+		<th:block th:include="Messages/alertaExito :: alerta"></th:block>
+	<th:block th:include="Messages/alertaConfirmacion :: alerta"></th:block>
+	<div class="container_48">
+		<div class="contenedor">
+			<div class="contenedor-form">
+				<!-- Begin Title -->
+				<th:block th:include="layout/HeadTitle :: TitleHead"></th:block>	
+				<!-- End Title -->
+				
+				<!-- Begin Content -->
+				<div class="row">
+					<div class="col-sm-1">					</div>
+					<div class="col-sm-10 CuadroMarco">
+					<br />					<br /><br />
+						<div  >
+							<fieldset >
+							 <legend > Parámetros Entidades </legend>
+							       
+							       
+							<table >
+								<tr>
+									<td style="width:5%;height:10px;"></td>
+							 		<td style="width:15%"></td>
+							 		<td style="width:1%"></td>
+							 		<td style="width:15%"></td>
+							 		<td style="width:15%"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td align="right"> <label>Hora Límite Petición:</label>
+									</td>
+									<td></td>
+									<td>
+										<input id="txtHrLimPet" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+									</td>
+								</tr>
+								
+								<tr>
+									<td style="height:10px;"></td>
+								</tr>
+								
+								<tr>
+									<td></td>
+									<td align="right"> <label>Hora Límite Recogida:</label>
+									</td>
+									<td></td>
+									<td>
+										<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+									</td>
+								</tr>
+								<tr>
+									<td style="height:10px;"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td align="right"> <label>Procedimiento de Cálculo de Encaje:</label>
+									</td>
+									<td></td>
+									<td>
+										<select id="cbCalcEnc" class="form-control">
+								          <option value="DIARIO">DIARIO</option>
+								          <option value="MENSUAL">MENSUAL</option>
+								        </select>
+									</td>
+								</tr>
+							</table>
+							
+							
+							
+					       </fieldset>
+						</div>
+							<br />
+							
+							
+			<!-- Begin Content -->
+				<div class="row">
+					<div class="col-sm-1">					</div>
+					<div class="col-sm-3">					</div>
+					<div class="col-sm-1">
+						<button id="BtnPrint" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Imprimir</span>
+					 	</button>					
+					</div>
+					<div class="col-sm-3">					</div>
+					<div class="col-sm-1">					
+					<button id="BtnSave" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Guardar</span>
+					 	</button>
+					</div>
+				</div>	
+			<!-- End Content -->				
+							
+					<br />		<br />
+					<br />
+					</div>
+					<div class="col-sm-1">					</div>
+				</div>	
+				<!-- End Content -->
+				
+				
+				
+			
+			
+			
+			<!-- Begin Content -->
+				<div class="row">
+					<div class="col-sm-1">					</div>
+					<div class="col-sm-3">				
+						<button id="btnClos" class="ui-button ui-widget ui-state-default ui-corner-all
+														ui-button-text-only btn_secundario margin-top-10"
+														style="left:-10px"
+													type="button" role="button" aria-disabled="false">
+												<span class="ui-button-text ui-c">Salir</span>
+						</button>
+						</div>
+				</div>	
+			<!-- End Content -->
+			</div>
+		</div>
+	</div>
+	
+	<div id="DivPrintParamEnt"></div>
+</body>
+</html>

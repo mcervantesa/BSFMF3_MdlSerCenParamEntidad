@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+    <div th:fragment="alerta">
+        <div id="alertaConfirmacion" role="dialog" aria-labelledby="dlgStore_title" aria-hidden="false"
+             class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-draggable ui-overlay-visible"
+             style="width: auto; height: auto; left: 403.5px;
+                 top: 66px; display: block; visibility: hidden; z-index: 1010;" aria-live="polite">
+            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle">
+                    <span id="dlgStore_title" class="ui-dialog-title">
+                    </span>
+            </div>
+            <div class="ui-dialog-content ui-widget-content" style="height: auto;">
+                <span class="ui-messages-info-icon info-dialog"></span>
+                <label class="ui-outputlabel ui-widget modal-mensaje" id="mensajeAlertaConfirmacion"></label>
+                <div class="clear margin-bottom-10"></div>
+                <button id="aceptarConfirmacion" role="button" aria-disabled="false" type="submit"
+                        class="ui-button ui-widget ui-state-default ui-corner-all
+                                    ui-button-text-only btn_principal_dialog_derecha"
+                        >
+                    <span class="ui-button-text ui-c">Aceptar</span>
+                </button>
+                <button id="noAlertaConfirmacion" role="button" aria-disabled="false" type="submit"
+                        class="ui-button ui-widget ui-state-default ui-corner-all
+                                ui-button-text-only btn_principal"
+                        onclick="cerrarAlertaConfirmacion();">
+                    <span class="ui-button-text ui-c">Cancelar</span>
+                </button>
+            </div>
+        </div>
+        <script>
+
+            /*
+             * Funcion para abrir la alerta.
+             */
+            function abrirAlertaConfirmacion(mensaje) {
+                $("#dlgStore_modal").addClass("ui-widget-overlay");
+                $("#alertaConfirmacion").css("visibility", "visible");
+                $("#mensajeAlertaConfirmacion").html(mensaje);
+            }
+
+            /*
+             * Crear mensaje de la alerta.
+             */
+            function setMensajeAlertaConfirmacion(mensaje) {
+                $("#mensajeAlertaConfirmacion").html(mensaje);
+            }
+
+            /*
+             * Funcion para cerrar la alerta.
+             */
+            function cerrarAlertaConfirmacion() {
+                $("#dlgStore_modal").removeClass("ui-widget-overlay");
+                $("#alertaConfirmacion").css("visibility", "hidden");
+            }
+        </script>
+    </div>
+</body>
+</html>

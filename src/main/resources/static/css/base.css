@@ -21,9 +21,11 @@ _botones.scss
 @import url(../fonts/opensans/font-opensans.css);
 @import url(../fonts/cbs/cbs.css);
 @import url(vendor/grid960.css);
-@import url(vendor/normalize.css);
+
 @import url(vendor/animate.css);
 /*
+
+@import url(vendor/normalize.css);
 _dashboard.scss
 
 /*transición estandar*/

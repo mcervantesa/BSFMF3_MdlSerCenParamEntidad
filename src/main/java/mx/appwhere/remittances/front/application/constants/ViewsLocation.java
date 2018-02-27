@@ -10,4 +10,6 @@ public final class ViewsLocation {
     
     //
     public static final String PERIODOS_VIEW = "acuerdos/periodos.html";
+    public static final String CAJACENTRALIZ_VIEW = "CajaCentr/CajaCentraliz.html";
+    public static final String PRINTPARAMENTID_VIEW = "CajaCentr/PrintParamEntid.html :: divPrint";
 }

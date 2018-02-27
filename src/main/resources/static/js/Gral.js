@@ -239,3 +239,29 @@ function printContenedorCamposId(id) {
         popupWin.print();
     }
 }
+
+function ObtieneContex()
+{
+	var aux= window.location.pathname.split("/");
+    var context = aux[1];
+    
+	var urlSvr =window.location.protocol + "//" + window.location.host + '/'+context;
+	return urlSvr;
+}
+
+function ImprimirDiv()
+{
+	$("#Imprimir").removeClass("hidden");
+	var printcontent = $('#Imprimir').html();
+	var mywindow = window.open('', 'PRINT', 'height=600,width=1200');
+    mywindow.document.write("<style type='text/css' media='print'>@page {size: A4; margin: 0mm; border: initial;border-radius: initial;width: initial;min-height: initial;box-shadow: initial;background: initial;page-break-after: always; } html{background-color: #FFFFFF; margin: 0px; } body { border: solid 0px; margin: 0mm 0mm 0mm 0mm; }</style>");
+    mywindow.document.write(printcontent);
+
+    mywindow.document.close(); // necessary for IE >= 10
+    mywindow.focus(); // necessary for IE >= 10*/
+
+    mywindow.print();
+    mywindow.close();
+    $("#Imprimir").addClass("hidden");
+	
+}

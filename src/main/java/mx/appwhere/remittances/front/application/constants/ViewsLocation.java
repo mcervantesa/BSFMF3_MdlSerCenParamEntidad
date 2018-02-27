@@ -21,4 +21,5 @@ public final class ViewsLocation {
     public static final String PRINTLISTAUDPARAMLIQ_VIEW = "Liquidaciones/PrintListAudLiq.html :: divPrint";
     public static final String LISTAUDITORIA_VIEW = "Liquidaciones/ListAudit.html";
     public static final String CONSTAUDITORIA_VIEW = "Liquidaciones/ConsAudit.html";
+    public static final String CHEQUES_VIEW = "Cheques/Cheques.html";
 }

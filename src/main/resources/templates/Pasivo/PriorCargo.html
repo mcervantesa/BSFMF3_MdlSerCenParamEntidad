@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<th:block th:include="layout/headGlobal :: head"></th:block>
+	<script th:src="@{/js/views/PriorCargo.js}"></script>
+	<meta charset="UTF-8"/>
+</head>
+<body>
+<th:block th:include="Messages/alertaError :: alerta"></th:block>
+		<th:block th:include="Messages/alertaExito :: alerta"></th:block>
+		<th:block th:include="Messages/alertaConfirmacion :: alerta"></th:block>
+
+	<div class="container_48">
+			<div class="contenedor">
+				<div class="contenedor-form">
+					<!-- Begin Title -->
+					<th:block th:include="layout/HeadTitle :: TitleHead"></th:block>	
+					<!-- End Title -->
+					<!-- Begin Content 01-->
+					<div class="row">
+						<div class="col-sm-1">					</div>
+						<div class="col-sm-10 CuadroMarco">
+						<table>
+							<tr>
+								<td style="width:1%;height:10px;"></td>
+							 	<td style="width:10%"></td>
+							 	<td style="width:1%"></td>
+							 	<td style="width:15%"></td>
+							 	<td style="width:1%"></td>
+							 	<td style="width:35%"></td>
+							 	<td style="width:1%"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td> Código Aplicación:</td>
+								<td></td>
+								<td>
+									<select class="form-control">
+											<option value="*** - TODAS LAS APLICACIONES">*** - TODAS LAS APLICACIONES</option>
+											<option value="A** - SUB APLICACIONES ACTIVO">A** - SUB APLICACIONES ACTIVO</option>
+											<option value="AAV - ACTIVO OPERACIONES DE AVALES">AAV - ACTIVO OPERACIONES DE AVALES</option>
+											<option value="ACR - ACTIVO OPERACIONES DE CREDITO">ACR - ACTIVO OPERACIONES DE CREDITO</option>
+											<option value="ADE - CARTERA OPERACIONES DE CARTERA CEDENTES">ADE - CARTERA OPERACIONES DE CARTERA CEDENTES</option>
+											<option	 value="ADL - CARTERA OPERACIONES DE CARTERA LIBRADOS">ADL - CARTERA OPERACIONES DE CARTERA LIBRADOS</option>
+											<option value="AGE - ACTIVO GENERAL">AGE - ACTIVO GENERAL</option>
+											<option value="APR - ACTIVO OPERACIONES DE PRESTAMO">APR - ACTIVO OPERACIONES DE PRESTAMO</option>
+										</select>
+								</td>
+							</tr>
+						</table>
+						</div>
+						<div class="col-sm-1">					</div>
+					</div>	
+					<!-- Begin Content 01-->
+				</div>
+			</div>
+	</div>				
+</body>
+</html>

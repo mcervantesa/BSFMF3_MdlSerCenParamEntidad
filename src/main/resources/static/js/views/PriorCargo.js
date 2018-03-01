@@ -1,19 +1,4 @@
 $(document).ready(function(){
-	InitHead();
-	InitBtn();
+	InitHead("Pasivo Prioridades Cargos");//Funcion Gral
 });
 
-function InitHead(){
-	try{
-		$("#lblTitle").text("Pasivo Prioridades Cargos");
-		$("#breadcum").click(function(){
-			parent.regresarMenuFrecuente();
-		});	
-	}catch(msg){
-		console.log('Error InitHead '+msg);
-	}	
-}
-
-function InitBtn(){
-	
-}

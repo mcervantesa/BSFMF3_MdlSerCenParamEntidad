@@ -1,28 +1,24 @@
 $(document).ready(function(){
-	InitHead();	
+	InitHead("Lista de Auditorías"); //Funcion Gral	
 	InitTable();
 	InitBtn();
 });
 
-function InitHead(){
-	try{
-		$("#lblTitle").text("Lista de Auditorías");
-		$("#breadcum").click(function(){
-			parent.regresarMenuFrecuente();
-		});	
-	}catch(msg){
-		console.log('Error InitHead '+msg);
-	}	
-}
 
 function InitTable(){
 	AplicTabl('tblListAut');
 }
 
 function InitBtn(){
-	$("#BtnBack").click(function(){
-		var urlAct=ObtieneContex()+'/ListAudLiquid';
-		$("#frmBack").attr('action', urlAct);
-		$("#frmBack").submit();
-	});
+	
+	try{
+		$("#BtnBack").click(function(){
+			var urlAct=ObtieneContex()+'/ListAudLiquid';
+			$("#frmBack").attr('action', urlAct);
+			$("#frmBack").submit();
+		});	
+	}catch(msg){
+		console.log('Error InitBtn '+msg);	
+	}
+	
 }

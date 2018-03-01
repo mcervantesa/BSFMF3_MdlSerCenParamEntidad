@@ -265,3 +265,12 @@ function ImprimirDiv()
     $("#Imprimir").addClass("hidden");
 	
 }
+
+//Inicializa Titulo de pantalla
+function InitHead(titleWind){
+	try{
+		$("#lblTitle").text(titleWind);
+	}catch(msg){
+		console.log('Error InitHead '+msg);
+	}	
+}

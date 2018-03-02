@@ -6,9 +6,9 @@
 	<meta charset="UTF-8"/>
 </head>
 <body>
-<th:block th:include="Messages/alertaError :: alerta"></th:block>
-		<th:block th:include="Messages/alertaExito :: alerta"></th:block>
-		<th:block th:include="Messages/alertaConfirmacion :: alerta"></th:block>
+	<th:block th:include="Messages/alertaError :: alerta"></th:block>
+	<th:block th:include="Messages/alertaExito :: alerta"></th:block>
+	<th:block th:include="Messages/alertaConfirmacion :: alerta"></th:block>
 
 	<div class="container_48">
 			<div class="contenedor">
@@ -27,8 +27,11 @@
 							 	<td style="width:1%"></td>
 							 	<td style="width:15%"></td>
 							 	<td style="width:1%"></td>
-							 	<td style="width:35%"></td>
+							 	<td style="width:15%"></td>
 							 	<td style="width:1%"></td>
+							 	<td style="width:15%"></td>
+							 	<td style="width:1%"></td>
+							 	<td style="width:15%"></td>
 							</tr>
 							<tr>
 								<td></td>
@@ -46,14 +49,137 @@
 											<option value="APR - ACTIVO OPERACIONES DE PRESTAMO">APR - ACTIVO OPERACIONES DE PRESTAMO</option>
 										</select>
 								</td>
+								<td></td>
+								<td> Código Cláusula:</td>
+								<td></td>
+								<td>
+									<select class="form-control">
+											<option value="S">S</option>
+											<option value="N">N</option>
+									</select>
+								</td>
+								<td></td>
+								<th rowspan="3">
+	    							<button  type="button" id="btnFindLiq"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left btn-consultar" 
+	    								role="button" aria-disabled="true">
+										<span class="ui-button-icon-left ui-icon ui-c fa fa-search"></span>
+										<span class="ui-button-text ui-c">Buscar</span>
+									</button>
+    							</th>
+							</tr>
+							<tr>
+								<td style="width:1%;height:10px;"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td> Código Garantia:</td>
+								<td></td>
+								<td>
+									<select class="form-control">
+											<option value="1 - GTIA. HIP. SUFICIENTE">1 - GTIA. HIP. SUFICIENTE</option>
+											<option value="2 - GTIA. HIP. INSUFICIENTE">2 - GTIA. HIP. INSUFICIENTE</option>
+											<option value="3 - GTIA. PREND. SUFICIENTE">3 - GTIA. PREND. SUFICIENTE</option>
+											<option value="4 - GTIA. PREND. INSUFICIENTE">4 - GTIA. PREND. INSUFICIENTE</option>
+											<option value="5 - GTIA. DIN. SUFICIENTE">5 - GTIA. DIN. SUFICIENTE</option>
+											<option	value="6 - GTIA. DIN. INSUFICIENTE">6 - GTIA. DIN. INSUFICIENTE</option>
+											<option value="7 - GTIA. PERSONAL">7 - GTIA. PERSONAL</option>
+											<option value="8 - GTIA. SECTOR PUBLICO">8 - GTIA. SECTOR PUBLICO</option>
+											<option value="9 - GTIA. MIXTA SUFICIENTE">9 - GTIA. MIXTA SUFICIENTE</option>
+											<option value="10 - GTIA. MIXTA INSUFICIENTE">10 - GTIA. MIXTA INSUFICIENTE</option>
+										</select>
+								</td>
+								<td></td>
+								<td> Código Cláusula:</td>
+								<td></td>
+								<td>
+									<select class="form-control">
+											<option value="S">S</option>
+											<option value="N">N</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td style="width:1%;height:10px;"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td> Prioridad Apunte:</td>
+								<td></td>
+								<td>
+									<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td style="width:1%;height:10px;"></td>
 							</tr>
 						</table>
+						
+						<table>
+							<tr>
+									<td style="width:60%"></td>
+									<td style="width:10%"></td>
+									<td style="width:2%"></td>
+									<td style="width:10%"></td>
+									<td style="width:2%"></td>
+									<td style="width:10%"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<button id="BtnPrint" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Imprimir</span>
+					 				</button>					
+								</td>
+								<td></td>
+								<td>
+									<button id="BtnClear" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Limpiar </span>
+					 				</button>
+								</td>
+								<td></td>
+								<td>
+									<button id="BtnSave" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Guardar</span>
+					 				</button>
+								</td>
+							</tr>
+						</table>
+						<br/>
 						</div>
 						<div class="col-sm-1">					</div>
 					</div>	
 					<!-- Begin Content 01-->
+					
+					<!-- Begin Content -->
+					<div class="row">
+						<div class="col-sm-1">					</div>
+						<div class="col-sm-3">					
+							<button id="btnClos" class="ui-button ui-widget ui-state-default ui-corner-all
+															ui-button-text-only btn_secundario margin-top-10"
+															style="left:-10px"
+														type="button" role="button" aria-disabled="false">
+													<span class="ui-button-text ui-c">Salir</span>
+							</button>
+						</div>
+					</div>	
+					<!-- End Content -->
+					
+					
 				</div>
 			</div>
-	</div>				
+	</div>
+	<div id="DivPrint"></div>				
 </body>
 </html>

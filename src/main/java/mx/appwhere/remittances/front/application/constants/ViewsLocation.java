@@ -24,4 +24,6 @@ public final class ViewsLocation {
     public static final String CHEQUES_VIEW = "Cheques/Cheques.html";
     public static final String PRINTCHEQUES_VIEW = "Cheques/PrintChequ.html :: divPrint";
     public static final String PASIVPRIORCARGO_VIEW = "Pasivo/PriorCargo.html";
+    public static final String PRINTPRIORCARGO_VIEW = "Pasivo/PrintPriorCargo.html :: divPrint";
+    public static final String PASIVGENERAL_VIEW = "Pasivo/General.html";
 }

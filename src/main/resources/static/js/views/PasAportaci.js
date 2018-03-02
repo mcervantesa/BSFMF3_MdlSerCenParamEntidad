@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	InitHead("Pasivo Generales");
+	InitHead("Pasivo Aportaciones");
 	InitBtn();
 });
 

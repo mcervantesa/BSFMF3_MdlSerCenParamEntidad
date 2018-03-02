@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<th:block th:include="layout/headGlobal :: head"></th:block>
+	<script th:src="@{/js/views/PasAportaci.js}"></script>
+	<meta charset="UTF-8"/>
+
+</head>
+<body>
+<th:block th:include="Messages/alertaError :: alerta"></th:block>
+		<th:block th:include="Messages/alertaExito :: alerta"></th:block>
+		<th:block th:include="Messages/alertaConfirmacion :: alerta"></th:block>
+	<div class="container_48">
+		<div class="contenedor">
+			<div class="contenedor-form">
+				<!-- Begin Title -->
+				<th:block th:include="layout/HeadTitle :: TitleHead"></th:block>	
+				<!-- End Title -->
+				
+				<!-- Begin Content 01-->
+					<div class="row">
+						<div class="col-sm-1">					</div>
+						<div class="col-sm-10 CuadroMarco">
+						<table>
+							<tr>
+								<td style="width:1%;height:10px;"></td>
+							 	<td style="width:5%"></td>
+							 	<td style="width:1%"></td>
+							 	<td style="width:3%"></td>
+							 	<td style="width:1%"></td>
+							 	<td style="width:15%"></td>
+							 	<td style="width:1%"></td>
+							 	<td style="width:15%"></td>
+							 	<td style="width:1%"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Entidad:</td>
+								<td></td>
+								<td>
+									<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+								</td>
+								<td></td>
+								<td>
+									<fieldset>
+										<legend>Figura Asociados</legend>
+										<table>
+											<tr>
+												<td style="width:1%;height:10px;"></td>
+											 	<td style="width:10%"></td>
+											 	<td style="width:1%"></td>
+											 	<td style="width:10%"></td>
+											 	<td style="width:1%"></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>
+													<label>
+													<input  type="radio" value="radio"  >
+														No
+													</label>
+												</td>
+												<td></td>
+												<td>
+												<label>
+													<input  type="radio" value="radio"  >
+														Socios cooperativas
+													</label>
+												</td>
+											</tr>
+										</table>	
+									</fieldset>
+								</td>
+								<td></td>
+								<td>
+									<fieldset>
+										<legend>Reclasificación Cuentas Socios</legend>
+										<table>
+											<tr>
+												<td style="width:1%;height:10px;"></td>
+											 	<td style="width:10%"></td>
+											 	<td style="width:1%"></td>
+											 	<td style="width:10%"></td>
+											 	<td style="width:1%"></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>
+													<label>
+													<input  type="radio" value="radio"  >
+														1 Titular Socio
+													</label>
+												</td>
+												<td></td>
+												<td>
+												<label>
+													<input  type="radio" value="radio"  >
+														Todos socios
+													</label>
+												</td>
+											</tr>
+										</table>	
+									</fieldset>
+								</td>
+							</tr>
+						</table>	
+						<table style="width:100%">
+							<tr>
+								<td style="width:29%"></td>
+								<td style="width:1%"></td>
+								<td style="width:25%"></td>
+								<td style="width:1%"></td>
+								<td style="width:25%"></td>
+							</tr>
+							<tr>
+								<td>
+									<fieldset>
+										<legend>Capital Mínimo Entidad</legend>
+										<table>
+											<tr>
+												<td style="width:1%;height:10px;"></td>
+											 	<td style="width:10%"></td>
+											 	<td style="width:1%"></td>
+											 	<td style="width:10%"></td>
+											 	<td style="width:1%"></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>
+													Series A+B:
+												</td>
+												<td></td>
+												<td>
+													<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+												</td>
+											</tr>
+										</table>	
+									</fieldset>
+								</td>
+								<td></td>
+								<td >
+									<fieldset>
+										<legend>% Máximo Capital</legend>
+										<table>
+											<tr>
+												<td style="width:1%;height:10px;"></td>
+											 	<td style="width:10%"></td>
+											 	<td style="width:1%"></td>
+											 	<td style="width:10%"></td>
+											 	<td style="width:1%"></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>
+													Persona Moral:
+												</td>
+												<td></td>
+												<td>
+													<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>
+													Persona Física:
+												</td>
+												<td></td>
+												<td>
+													<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+												</td>
+											</tr>
+										</table>	
+									</fieldset>
+								</td>
+								<td></td>
+								<td>
+									<fieldset>
+										<legend>% Máximo Total Capital</legend>
+										<table>
+											<tr>
+												<td style="width:1%;height:10px;"></td>
+											 	<td style="width:10%"></td>
+											 	<td style="width:1%"></td>
+											 	<td style="width:10%"></td>
+											 	<td style="width:1%"></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>
+													Autocartera:
+												</td>
+												<td></td>
+												<td>
+													<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>
+													Persona Moral s:
+												</td>
+												<td></td>
+												<td>
+													<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+												</td>
+											</tr>
+										</table>	
+									</fieldset>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<td style="width:1%;height:10px;"></td>
+											<td style="width:10%;height:10px;"></td>
+											<td style="width:1%;height:10px;"></td>
+											<td style="width:10%;height:10px;"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td align="right">
+												Ultimo N° Serie A:			
+											</td>
+											<td></td>
+											<td>
+												<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>			
+											</td>
+										</tr>
+									</table>
+								
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<td style="width:1%;height:10px;"></td>
+											<td style="width:10%;height:10px;"></td>
+											<td style="width:1%;height:10px;"></td>
+											<td style="width:10%;height:10px;"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td align="right">
+												Ultimo N° Serie B:				
+											</td>
+											<td></td>
+											<td>
+												<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>			
+											</td>
+										</tr>
+									</table>
+								
+								</td>
+								<td></td>
+								<td colspan="3" rowspan="3">
+									<fieldset>
+										<legend>Capital Mínimo Entidad</legend>
+										<table>
+										<tr>
+											<td style="width:1%;height:10px;"></td>
+											<td style="width:10%;height:10px;"></td>
+											<td style="width:1%;height:10px;"></td>
+											<td style="width:10%;height:10px;"></td>
+											<td style="width:1%;height:10px;"></td>
+											<td style="width:10%;height:10px;"></td>
+											<td style="width:1%;height:10px;"></td>
+											<td style="width:10%;height:10px;"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td align="right">
+												Persona Moral:				
+											</td>
+											<td></td>
+											<td>
+												<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>			
+											</td>
+											<td></td>
+											<td align="right">
+												Persona Física:				
+											</td>
+											<td></td>
+											<td>
+												<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>			
+											</td>
+										</tr>
+									</table>
+									</fieldset>
+								
+								
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<td style="width:1%;height:10px;"></td>
+											<td style="width:10%;height:10px;"></td>
+											<td style="width:1%;height:10px;"></td>
+											<td style="width:10%;height:10px;"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td align="right">
+												Ultimo N° Socio:				
+											</td>
+											<td></td>
+											<td>
+												<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>			
+											</td>
+										</tr>
+									</table>
+								
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<td style="width:1%;height:10px;"></td>
+											<td style="width:10%;height:10px;"></td>
+											<td style="width:1%;height:10px;"></td>
+											<td style="width:10%;height:10px;"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td align="right">
+												Meses Archivo:				
+											</td>
+											<td></td>
+											<td>
+												<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>			
+											</td>
+										</tr>
+									</table>
+								
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<fieldset>
+										<legend>Serie de Aportaciones</legend>
+										<table>
+											<tr>
+												<td style="width:1%;height:10px;"></td>
+											 	<td style="width:10%"></td>
+											 	<td style="width:1%"></td>
+											 	<td style="width:10%"></td>
+											 	<td style="width:1%"></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td>
+													<label>
+													<input  type="radio" value="radio"  >
+														Serie A
+													</label>
+												</td>
+												<td></td>
+												<td>
+													<label>
+													<input  type="radio" value="radio"  >
+														Series A/B
+													</label>
+												</td>
+											</tr>
+										</table>	
+									</fieldset>						
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>
+									<button id="BtnSave" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Guardar</span>
+					 				</button>
+								</td>
+							</tr>
+						</table>
+						
+						
+						</div>
+						<div class="col-sm-1">					</div>
+					</div>
+				<!-- End Content 01-->	
+				
+				<!-- Begin Content -->
+					<div class="row">
+						<div class="col-sm-1">					</div>
+						<div class="col-sm-3">				
+							<button id="btnClos" class="ui-button ui-widget ui-state-default ui-corner-all
+															ui-button-text-only btn_secundario margin-top-10"
+															style="left:-10px"
+														type="button" role="button" aria-disabled="false">
+													<span class="ui-button-text ui-c">Salir</span>
+							</button>
+							</div>
+					</div>	
+				<!-- End Content -->
+				
+			</div>
+		</div>
+	</div>			
+</body>
+</html>

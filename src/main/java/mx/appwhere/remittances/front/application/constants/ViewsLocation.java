@@ -26,4 +26,11 @@ public final class ViewsLocation {
     public static final String PASIVPRIORCARGO_VIEW = "Pasivo/PriorCargo.html";
     public static final String PRINTPRIORCARGO_VIEW = "Pasivo/PrintPriorCargo.html :: divPrint";
     public static final String PASIVGENERAL_VIEW = "Pasivo/General.html";
+    public static final String PASIVAPORTACIONES_VIEW = "Pasivo/Aportaciones.html";
+    public static final String TABREFMANCENTAUT_VIEW = "TabRefer/MantCentAut.html";
+    public static final String PRINTTABREFMANCENTAUT_VIEW = "TabRefer/PrintMantCentAut.html :: divPrint";
+    public static final String TABREFCONSULTA_VIEW = "TabRefer/ConsTabRef.html";
+    public static final String PRINTTABREFCONSULTA_VIEW = "TabRefer/PrintConsulTabRef.html :: divPrint";
+    public static final String SELECTAMPLFIL_VIEW = "TabRefer/SelecAmplFil.html";
+    public static final String PRINTSELECTAMPLFIL_VIEW = "TabRefer/PrintSelecAmpFil.html :: divPrint";
 }

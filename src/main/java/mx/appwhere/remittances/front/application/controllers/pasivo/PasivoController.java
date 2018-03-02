@@ -31,4 +31,10 @@ public class PasivoController {
         return mav;
     }
 	
+	@RequestMapping(value = "/PasAportaciones", method = RequestMethod.POST)
+	public ModelAndView getPasAportacionesView(String bsfOper) {
+        ModelAndView mav = new ModelAndView(ViewsLocation.PASIVAPORTACIONES_VIEW);
+        //mav.addObject("BSFOPERADOR", bsfOperador);
+        return mav;
+    }
 }

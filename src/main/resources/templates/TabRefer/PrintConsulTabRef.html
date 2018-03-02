@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+<div th:fragment="divPrint">
+	<div id="Imprimir" class="hidden" >
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<img th:src="@{/img/logo.png}" />
+				</td>
+				<td></td>
+				<td colspan="3">CONSULTA DE FILA DE TABLA REFERENCIAL</td>
+			</tr>
+			<tr>
+				<td>Fecha</td>
+				<td>Hora</td>
+				<td>Oficina</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="5">============</td>
+			</tr>
+			<tr>
+				<td>Tabla:</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Clave Fila:</td>
+				<td></td>
+				<td></td>
+			</tr>	
+			<tr>
+				<td>Des. Corta:</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Des. Larga:</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="5">============</td>
+			</tr>
+			<tr>
+				<td>Código</td>
+				<td>Columna</td>
+				<td>Valor</td>
+			</tr>
+		</table>
+	</div>
+	
+	<script>
+    	//FechFormat()
+    	ImprimirDiv();
+    </script>
+</div>	
+</body>
+</html>

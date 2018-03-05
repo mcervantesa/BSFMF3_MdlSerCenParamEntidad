@@ -65,4 +65,18 @@ public class TablaReferenController {
         //mav.addObject("BSFOPERADOR", bsfOperador);
         return mav;
     }
+	
+	@RequestMapping(value = "/ManFilTabRef", method = RequestMethod.POST)
+	public ModelAndView getManFilTabRefView(String bsfOper) {
+        ModelAndView mav = new ModelAndView(ViewsLocation.MANFILTABREF_VIEW);
+        //mav.addObject("BSFOPERADOR", bsfOperador);
+        return mav;
+    }
+	
+	@RequestMapping(value = "/ConsDomColTabRef", method = RequestMethod.POST)
+	public ModelAndView getConsDomColTabRefView(String bsfOper) {
+        ModelAndView mav = new ModelAndView(ViewsLocation.CONSDOMCOL_VIEW);
+        //mav.addObject("BSFOPERADOR", bsfOperador);
+        return mav;
+    }
 }

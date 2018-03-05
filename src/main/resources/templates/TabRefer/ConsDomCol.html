@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<th:block th:include="layout/headGlobal :: head"></th:block>
+	<th:block th:include="layout/headTable :: head"></th:block>
+	<script th:src="@{/js/views/ConsDomCol.js}"></script>
+	<meta charset="UTF-8"/>
+</head>
+<body>
+	<th:block th:include="Messages/alertaError :: alerta"></th:block>
+	<th:block th:include="Messages/alertaExito :: alerta"></th:block>
+	<th:block th:include="Messages/alertaConfirmacion :: alerta"></th:block>
+	
+	<div class="container_48">
+		<div class="contenedor">
+			<div class="contenedor-form">
+				<!-- Begin Title -->
+				<th:block th:include="layout/HeadTitle :: TitleHead"></th:block>	
+				<!-- End Title -->
+				
+				<!-- Begin Content 01-->
+					<div class="row">
+						<div class="col-sm-1">					</div>
+						<div class="col-sm-10 CuadroMarco">
+							<table style="width:100%">
+								<tr>
+									<td style="width:1%;height:10px;"></td>
+								 	<td style="width:15%"></td>
+								 	<td style="width:1%"></td>
+								 	<td style="width:5%"></td>
+								 	<td style="width:1%"></td>
+								 	<td style="width:10%"></td>
+								 	<td style="width:1%"></td>
+								 	<td style="width:15%"></td>
+								 	<td style="width:1%"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td align="right">Columna:</td>
+									<td></td>
+									<td>
+										<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+									</td>
+									<td></td>
+									<td>
+										<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+									</td>
+									<td></td>
+									<td align="right">Clase:</td>
+									<td></td>
+									<td colspan="3">
+										<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td align="right">Longitud Entidad:</td>
+									<td></td>
+									<td>
+										<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+									</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td align="right">
+										Longitud Decimal:
+									</td>
+									<td></td>
+									<td>
+										<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+									</td>
+								</tr>
+							</table>	
+							
+							<table style="width:100%">
+								<tr>
+									<td style="width:49%;height:1px;"></td>
+								 	<td style="width:1%"></td>
+								 	<td style="width:49%"></td>
+								 	<td style="width:1%"></td>
+								</tr>
+								<tr>
+									
+									<td>
+										<fieldset>
+											<legend>Dominio Importe</legend>
+											<table style="width:100%">
+												<tr>
+													<td style="width:15%;height:1px;"></td>
+												 	<td style="width:1%"></td>
+												 	<td style="width:49%"></td>
+												 	<td style="width:1%"></td>			
+												</tr>
+												<tr>
+													<td align="right">Rango Mínimo:</td>
+													<td></td>
+													<td>
+														<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+													</td>
+												</tr>
+												<tr>
+													<td align="right">Rango Máximo:</td>
+													<td></td>
+													<td>
+														<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+													</td>
+												</tr>
+											</table>
+										</fieldset>
+									</td>
+									<td></td>
+									<td>
+										<fieldset>
+											<legend>Dominio Fecha</legend>
+											<table style="width:100%">
+												<tr>
+													<td style="width:15%;height:1px;"></td>
+												 	<td style="width:1%"></td>
+												 	<td style="width:49%"></td>
+												 	<td style="width:1%"></td>			
+												</tr>
+												<tr>
+													<td align="right">Fecha Mínimo:</td>
+													<td></td>
+													<td>
+														<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+													</td>
+												</tr>
+												<tr>
+													<td align="right">Fecha Máximo:</td>
+													<td></td>
+													<td>
+														<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+													</td>
+												</tr>
+											</table>
+										</fieldset>
+									</td>
+									<td></td>
+								</tr>
+							</table>
+							
+							<table style="width:100%">
+								<tr>
+									<td style="width:1%"></td>
+									<td style="width:98%;height:1px;"></td>
+									<td style="width:1%"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+									
+											<fieldset>
+												<legend>Dominio Alfabético</legend>
+												<table style="width:100%">
+													<thead>
+														<tr>
+															<th > Código</th>
+															<th > Columna</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Cod Test</td>
+															<td>Cod Test col</td>
+														</tr>
+													</tbody>
+												</table>
+											</fieldset>
+									</td>
+									<td></td>
+									<td>
+										<button id="BtnSave" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Exportar</span>
+										</button>
+										<br/>
+											<button id="BtnSave" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+											<span class="ui-button-text ui-c">Seleccionar</span>
+					 						</button>
+									</td>
+								</tr>
+							</table>
+							<table>
+								<tr>
+									<td style="width:70%;height:1px;"></td>
+									
+									<td style="width:14%"></td>
+									<td style="width:1%"></td>
+									<td style="width:14%"></td>
+									<td style="width:1%"></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+										<button id="BtnSave" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+											<span class="ui-button-text ui-c">Imprimir</span>
+					 					</button>
+									</td>
+									<td></td>
+									<td>
+										<button id="BtnSave" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+											<span class="ui-button-text ui-c">Anterior</span>
+					 					</button>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="col-sm-1">					</div>
+					</div>	
+			</div>
+		</div>
+	</div>		
+</body>
+</html>

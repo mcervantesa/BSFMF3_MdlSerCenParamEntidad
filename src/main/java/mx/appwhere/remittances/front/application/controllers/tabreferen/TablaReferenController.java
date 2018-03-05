@@ -51,4 +51,18 @@ public class TablaReferenController {
         //mav.addObject("BSFOPERADOR", bsfOperador);
         return mav;
     }
+	
+	@RequestMapping(value = "/DetSelecAmpFil", method = RequestMethod.POST)
+	public ModelAndView getDetSelecAmpFilView(String bsfOper) {
+        ModelAndView mav = new ModelAndView(ViewsLocation.DETSELECTAMPLFIL_VIEW);
+        //mav.addObject("BSFOPERADOR", bsfOperador);
+        return mav;
+    }
+	
+	@RequestMapping(value = "/ConsTabAsoc", method = RequestMethod.POST)
+	public ModelAndView getConsTabAsocView(String bsfOper) {
+        ModelAndView mav = new ModelAndView(ViewsLocation.CONSTABASOC_VIEW);
+        //mav.addObject("BSFOPERADOR", bsfOperador);
+        return mav;
+    }
 }

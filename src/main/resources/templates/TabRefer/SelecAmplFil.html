@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
 	<th:block th:include="layout/headGlobal :: head"></th:block>
+	<th:block th:include="layout/headTable :: head"></th:block>
 	<script th:src="@{/js/views/SelecAmplFil.js}"></script>
 	<meta charset="UTF-8"/>
 </head>
@@ -49,7 +50,7 @@
 								</td>
 								<td></td>
 								<td rowspan="3">
-									<button  type="button" id="btnFindLiq"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left btn-consultar" 
+									<button  type="button" id="btnFindSelecAmp"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left btn-consultar" 
 	    								role="button" aria-disabled="true">
 										<span class="ui-button-icon-left ui-icon ui-c fa fa-search"></span>
 										<span class="ui-button-text ui-c">Buscar</span>
@@ -91,7 +92,7 @@
 							<tr>
 								<td></td>
 								<td>
-									<div id="DivFindSelecAmFil"></div>
+									<div id="DivDetSelecAmpFil"></div>
 								</td>
 								<td></td>
 								<td>
@@ -152,6 +153,6 @@
 			</div>
 		</div>
 	</div>
-<div id="DivPrintSelecAmpFil"></div>			
+	<div id="DivPrintSelecAmpFil"></div>			
 </body>
 </html>

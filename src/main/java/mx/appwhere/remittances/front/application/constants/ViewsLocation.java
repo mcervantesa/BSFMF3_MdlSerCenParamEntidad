@@ -33,4 +33,6 @@ public final class ViewsLocation {
     public static final String PRINTTABREFCONSULTA_VIEW = "TabRefer/PrintConsulTabRef.html :: divPrint";
     public static final String SELECTAMPLFIL_VIEW = "TabRefer/SelecAmplFil.html";
     public static final String PRINTSELECTAMPLFIL_VIEW = "TabRefer/PrintSelecAmpFil.html :: divPrint";
+    public static final String DETSELECTAMPLFIL_VIEW = "TabRefer/DetSelecAmpFil.html :: DivdetalleSelecAmp";
+    public static final String CONSTABASOC_VIEW = "TabRefer/ConsTabAsoc.html";
 }

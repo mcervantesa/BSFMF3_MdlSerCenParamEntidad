@@ -14,4 +14,11 @@ function InitBtn(){
 			console.log('Error BtnPrint '+msg);
 		}	
 	});
+	
+	$("#btnFindSelecAmp").click(function(){
+		var urlDet=ObtieneContex()+'/DetSelecAmpFil';
+		$("#DivDetSelecAmpFil").load(urlDet,{'bsfOper':''},function(){
+			AplicTabl('tblDetallSelecAm');
+		});
+	});
 }

@@ -79,4 +79,25 @@ public class TablaReferenController {
         //mav.addObject("BSFOPERADOR", bsfOperador);
         return mav;
     }
+	
+	@RequestMapping(value = "/TabRefPrincipal", method = RequestMethod.POST)
+	public ModelAndView getTabRefPrincipalView(String bsfOper) {
+        ModelAndView mav = new ModelAndView(ViewsLocation.TABREFPRINC_VIEW);
+        //mav.addObject("BSFOPERADOR", bsfOperador);
+        return mav;
+    }
+	
+	@RequestMapping(value = "/DetalleTabRefPrincipal", method = RequestMethod.POST)
+	public ModelAndView getDetalleTabRefPrincipalView(String bsfOper) {
+        ModelAndView mav = new ModelAndView(ViewsLocation.DETALLTABREFPRINC_VIEW);
+        //mav.addObject("BSFOPERADOR", bsfOperador);
+        return mav;
+    }
+	
+	@RequestMapping(value = "/PrintTabRefPrincipal", method = RequestMethod.POST)
+	public ModelAndView getPrintTabRefPrincipalView(String bsfOper) {
+        ModelAndView mav = new ModelAndView(ViewsLocation.PRINTTABREFPRINC_VIEW);
+        //mav.addObject("BSFOPERADOR", bsfOperador);
+        return mav;
+    }
 }

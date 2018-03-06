@@ -37,4 +37,13 @@ public final class ViewsLocation {
     public static final String CONSTABASOC_VIEW = "TabRefer/ConsTabAsoc.html";
     public static final String MANFILTABREF_VIEW = "TabRefer/MantFilTabRef.html";
     public static final String CONSDOMCOL_VIEW = "TabRefer/ConsDomCol.html";
+    public static final String TABREFPRINC_VIEW = "TabRefer/TabRefPrinc.html";
+    public static final String DETALLTABREFPRINC_VIEW = "TabRefer/DetTabRefPrinc.html :: DivdetalleTabRef";
+    public static final String PRINTTABREFPRINC_VIEW = "TabRefer/PrintTabRefPrinc.html :: divPrint";
+    public static final String DUDOSIDAD_VIEW = "Dudosidad/Dudosidad.html";
+    public static final String CENTROS_VIEW = "Centros/Centros.html";
+    public static final String PRINTCENTROS_VIEW = "Centros/PrintCentros.html :: divPrint";
+    public static final String COINCID_LISTGRIP_VIEW = "CoincidTitul/ListGrupLinea.html";
+    public static final String COINCIDTITUD_VIEW = "CoincidTitul/CoincidTitul.html";
+    public static final String COINCIDTITUD_DET_VIEW = "CoincidTitul/DetallCoincTitu.html :: DivdetalleCoincTit";
 }

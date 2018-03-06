@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+	<th:block th:include="layout/headGlobal :: head"></th:block>
+	<th:block th:include="layout/headTable :: head"></th:block>
+	<script th:src="@{/js/views/CoincidTitul.js}"></script>
+	<meta charset="UTF-8"/>
+</head>
+<body>
+<div class="container_48">
+		<div class="contenedor">
+			<div class="contenedor-form">
+				<!-- Begin Title -->
+				<th:block th:include="layout/HeadTitle :: TitleHead"></th:block>	
+				<!-- End Title -->
+				<!-- Begin Content -->
+				<div class="row">
+					<div class="col-sm-1">					</div>
+					<div class="col-sm-10 CuadroMarco">
+						<table>
+							<tr>
+								<td style="width:5%;height:10px;"></td>
+								<td style="width:7%;"></td>
+								<td style="width:3%;"></td>
+								<td style="width:10%;"></td>
+								<td style="width:3%;"></td>
+								<td style="width:15%;"></td>
+								<td style="width:5%;"></td>
+								<td style="width:5%;"></td>
+								<td style="width:15%;"></td>
+								<td style="width:2%;"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Linea:</td>
+								<td></td>
+								<td>
+									<select class="form-control"></select>
+								</td>
+								<td></td>
+								<td colspan="3"></td>
+								<th rowspan="3">
+	    							<button  type="button" id="btnFind"  class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left btn-consultar" 
+	    								role="button" aria-disabled="true">
+										<span class="ui-button-icon-left ui-icon ui-c fa fa-search"></span>
+										<span class="ui-button-text ui-c">Buscar</span>
+									</button>
+    							</th>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Grupo:</td>
+								<td></td>
+								<td>
+									<select class="form-control"></select>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Código Relación:</td>
+								<td></td>
+								<td>
+									<select class="form-control"></select>
+								</td>
+							</tr>
+						</table>
+						<table style="width:100%;">
+							<tr>
+								<td style="width:80%;height:10px;"></td>
+								<td style="width:2%;"></td>
+								<td style="width:18%;"></td>
+							</tr>
+							<tr>
+								<td>
+									<div id="DivDetallCoinc"></div>
+								</td>
+								<td></td>
+								<td>
+								
+									<button id="BtnPrint" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Exportar</span>
+					 				</button>					
+					 				<br/>
+					 				<button id="BtnPrint" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Seleccionar</span>
+					 				</button>					
+					 				<br/>
+					 				<button id="BtnPrint" class="ui-button ui-widget ui-state-default ui-corner-all
+												ui-button-text-only  margin-top-10"
+											type="button" role="button" aria-disabled="false">
+										<span class="ui-button-text ui-c">Eliminar</span>
+					 				</button>					
+					 				
+								</td>
+							</tr>
+						</table>
+						
+						<table style="width:100%;">
+							<tr>
+								<td style="width:5%;height:10px;"></td>
+								<td style="width:8%;"></td>
+								<td style="width:8%;"></td>
+								<td style="width:8%;"></td>
+								<td style="width:8%;"></td>
+								<td style="width:8%;"></td>
+								<td style="width:18%;"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td align="right">Línea-Grupo:</td>
+								<td></td>
+								<td>
+									<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+								</td>
+								<td></td>
+								<td>
+									<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+								</td>
+								<td></td>
+								<td>
+									<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td align="right">Línea2-Grupo2:</td>
+								<td></td>
+								<td>
+									<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+								</td>
+								<td></td>
+								<td>
+									<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+								</td>
+								<td></td>
+								<td>
+									<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td align="right">Código Relación:</td>
+								<td></td>
+								<td>
+									<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+								</td>
+								<td></td>
+								<td colspan="3">
+									<input id="txtHrLimReg" type="text"  class="ui-inputfield ui-inputmask ui-widget ui-state-default ui-corner-all form-control"/>
+								</td>
+								
+							</tr>
+							<tr>
+								<td></td>
+								<td align="right">Indicador Coincidencia:</td>
+								<td></td>
+								<td colspan="3">
+									<select class="form-control">
+									</select>
+								</td>
+								
+							</tr>
+						</table>
+						<table>
+							<tr>
+								<td style="width:50%;height:10px;"></td>
+								<td style="width:3%;"></td>
+								<td style="width:1%;"></td>
+								<td style="width:15%;"></td>
+								<td style="width:1%;"></td>
+								<td style="width:3%;"></td>
+								<td style="width:1%;"></td>
+								<td style="width:3%;"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<button id="BtnPrint" class="ui-button ui-widget ui-state-default ui-corner-all
+													ui-button-text-only  margin-top-10"
+												type="button" role="button" aria-disabled="false">
+											<span class="ui-button-text ui-c">Limpiar</span>
+						 			</button>					
+								</td>
+								<td></td>
+								<td>
+									<button id="BtnPrint" class="ui-button ui-widget ui-state-default ui-corner-all
+													ui-button-text-only  margin-top-10"
+												type="button" role="button" aria-disabled="false">
+											<span class="ui-button-text ui-c">Suprimir Lista</span>
+						 			</button>					
+								</td>
+								<td></td>
+								<td>
+									<button id="BtnPrint" class="ui-button ui-widget ui-state-default ui-corner-all
+													ui-button-text-only  margin-top-10"
+												type="button" role="button" aria-disabled="false">
+											<span class="ui-button-text ui-c">Guardar</span>
+						 			</button>					
+								</td>
+								<td></td>
+								<td>
+									<button id="BtnPrint" class="ui-button ui-widget ui-state-default ui-corner-all
+													ui-button-text-only  margin-top-10"
+												type="button" role="button" aria-disabled="false">
+											<span class="ui-button-text ui-c">Incorporar</span>
+						 			</button>					
+								</td>
+							</tr>
+						</table>
+						<br/>
+					</div>
+						<div class="col-sm-1">					</div>
+				</div>	
+				
+				<!-- Begin Content -->
+				<div class="row">
+					<div class="col-sm-1">					</div>
+					<div class="col-sm-3">				
+						<button id="btnClos" class="ui-button ui-widget ui-state-default ui-corner-all
+														ui-button-text-only btn_secundario margin-top-10"
+														style="left:-10px"
+													type="button" role="button" aria-disabled="false">
+												<span class="ui-button-text ui-c">Salir</span>
+						</button>
+						</div>
+				</div>	
+			<!-- End Content -->
+			</div>
+		</div>
+</div>			
+</body>
+</html>

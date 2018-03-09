@@ -12,6 +12,11 @@
 		<th:block th:include="Messages/alertaExito :: alerta"></th:block>
 		<th:block th:include="Messages/alertaConfirmacion :: alerta"></th:block>
 
+<form id="frmEnv" method="post" >
+	<input id="BsOperad" th:value="${BSFOPERADOR}" name="BSFOPERADOR"  hidden="hidden" />
+</form>
+
+
 <div class="container_48">
 		<div class="contenedor">
 			<div class="contenedor-form">
@@ -46,7 +51,7 @@
 									    <span class="glyphicon glyphicon-align-justify"></span> Menú 
 									  </button>
 									  <ul class="dropdown-menu" role="menu">
-									  	<li><span class="label_gris"><a href="#">Auditoria</a> </span> </li>
+									  	<li style="padding: 1px;margin-left: 15px"><span class="label_gris"><a href="#" onclick="EnviaForm('ListAudit')">Auditoria</a> </span> </li>
 									  </ul>
 									</div>
 									<!-- End Boton -->																		
@@ -54,7 +59,7 @@
 							</tr>
 							<tr>
 								<td></td>
-								<td align="right">Línea</td>
+								<td align="right">Línea :</td>
 								<td></td>
 								<td><select class="form-control"></select></td>
 								<td colspan="2"></td>
@@ -68,7 +73,7 @@
 							</tr>
 							<tr>
 								<td></td>
-								<td align="right">Grupo</td>
+								<td align="right">Grupo :</td>
 								<td></td>
 								<td><select class="form-control"></select></td>
 								<td></td>
@@ -84,7 +89,7 @@
 							</tr>
 							<tr>
 								<td></td>
-								<td align="right">Código Relación</td>
+								<td align="right">Código Relación :</td>
 								<td></td>
 								<td><select class="form-control"></select></td>
 							</tr>

@@ -4,7 +4,6 @@ $(document).ready(function(){
 });
 
 function InitBtn(){
-	
 	try{
 		$("#btnFindLiq").click(function(){
 			var urlFindLiq=ObtieneContex()+'/BusqLiquid';
@@ -25,6 +24,11 @@ function InitBtn(){
 		});	
 	}catch(msg){
 		log.error('Error InitBtn '+msg);
-	}
-	
+	}	
+}
+
+function EnviaForm(sendForm){
+	var urlDet=ObtieneContex()+'/'+sendForm;
+	$("#frmEnv").attr('action',urlDet);
+	$("#frmEnv").submit();
 }

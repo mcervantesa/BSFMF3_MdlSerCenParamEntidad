@@ -16,7 +16,11 @@ function InitBtn(){
 		$("#DivPrintTabRef").load(urlDet,{'BSFOPERADOR':''},function(){
 			
 		});
-	});	
+	});
+	
+	$("#BtnFilas").click(function(){
+		EnviaForm('ManFilTabRef');
+	});
 }
 
 function EnviaForm(sendForm){

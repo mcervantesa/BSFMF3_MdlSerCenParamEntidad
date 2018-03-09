@@ -13,7 +13,7 @@ public class CentrosController {
 	@RequestMapping(value = "/Centros", method = RequestMethod.POST)
 	public ModelAndView getCentrosView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.CENTROS_VIEW);
-        /mav.addObject("BSFOPERADOR", BSFOPERADOR);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	

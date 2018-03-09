@@ -6,7 +6,7 @@ $(document).ready(function(){
 function InitBtn(){
 	$("#btnFind").click(function(){
 		var ulrDet=ObtieneContex()+'/detallCoinTitu';
-		$("#DivDetallCoinc").load(ulrDet,{'bsfOper':''},function(){
+		$("#DivDetallCoinc").load(ulrDet,{'BSFOPERADOR':''},function(){
 			AplicTabl('tblDetallCoincTit');
 		});
 	});

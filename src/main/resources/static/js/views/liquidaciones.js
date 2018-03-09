@@ -8,7 +8,7 @@ function InitBtn(){
 	try{
 		$("#btnFindLiq").click(function(){
 			var urlFindLiq=ObtieneContex()+'/BusqLiquid';
-			$("#divBusqLiqu").load(urlFindLiq,{'bsfOper':''},function(){
+			$("#divBusqLiqu").load(urlFindLiq,{'BSFOPERADOR':''},function(){
 				AplicTabl('tblDetall');
 			});
 		});
@@ -19,7 +19,7 @@ function InitBtn(){
 		
 		$("#BtnPrint").click(function(){
 			var urlPrint=ObtieneContex()+'/PrintLiquid';
-			$("#DivPrint").load(urlPrint,{'bsfOper':''},function(){
+			$("#DivPrint").load(urlPrint,{'BSFOPERADOR':''},function(){
 				
 			});
 		});	

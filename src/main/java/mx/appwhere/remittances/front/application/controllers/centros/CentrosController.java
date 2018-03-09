@@ -11,14 +11,14 @@ import mx.appwhere.remittances.front.application.constants.ViewsLocation;
 public class CentrosController {
 
 	@RequestMapping(value = "/Centros", method = RequestMethod.POST)
-	public ModelAndView getCentrosView(String bsfOper) {
+	public ModelAndView getCentrosView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.CENTROS_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        /mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "/PrintCentros", method = RequestMethod.POST)
-	public ModelAndView getPrintCentrosView(String bsfOper) {
+	public ModelAndView getPrintCentrosView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.PRINTCENTROS_VIEW);
         //mav.addObject("BSFOPERADOR", bsfOperador);
         return mav;

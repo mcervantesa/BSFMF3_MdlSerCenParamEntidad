@@ -12,58 +12,58 @@ import mx.appwhere.remittances.front.application.constants.ViewsLocation;
 public class LiquidacionesController {
 
 	@PostMapping(value ="/liquidaciones")
-	public ModelAndView getLiquidacionesView() {
+	public ModelAndView getLiquidacionesView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.LIQUIDACIONES_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "BusqLiquid", method = RequestMethod.POST)
-	public ModelAndView getprintBusqLiquidView(String bsfOper) {
+	public ModelAndView getprintBusqLiquidView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.FINDLIQUIDACIONES_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "PrintLiquid", method = RequestMethod.POST)
-	public ModelAndView getprintLiquidView(String bsfOper) {
+	public ModelAndView getprintLiquidView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.PRINTLIQUIDACIONES_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "ListAudLiquid", method = RequestMethod.POST)
-	public ModelAndView getLisAudLiquidView(String bsfOper) {
+	public ModelAndView getLisAudLiquidView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.LISTAUDPARAMLIQUIDACIONES_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "FindListAudLiquid", method = RequestMethod.POST)
-	public ModelAndView getFindListAudLiquidView(String bsfOper) {
+	public ModelAndView getFindListAudLiquidView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.FINDLISTAUDPARAMLIQ_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "PrintListAudLiquid", method = RequestMethod.POST)
-	public ModelAndView getPrintListAudLiquidView(String bsfOper) {
+	public ModelAndView getPrintListAudLiquidView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.PRINTLISTAUDPARAMLIQ_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "ListAudit", method = RequestMethod.POST)
-	public ModelAndView getListAuditView(String bsfOper) {
+	public ModelAndView getListAuditView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.LISTAUDITORIA_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "ConsAudit", method = RequestMethod.POST)
-	public ModelAndView getConsAuditView(String bsfOper) {
+	public ModelAndView getConsAuditView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.CONSTAUDITORIA_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 }

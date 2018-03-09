@@ -6,7 +6,7 @@ $(document).ready(function(){
 function InitBtn(){
 	$("#BtnPrint").click(function(){
 		var urlPrint =ObtieneContex()+'/PrintMantCentAut';
-		$("#divPrintMantCentAut").load(urlPrint,{'bsfOper':''},function(){
+		$("#divPrintMantCentAut").load(urlPrint,{'BSFOPERADOR':''},function(){
 			
 		});
 	});

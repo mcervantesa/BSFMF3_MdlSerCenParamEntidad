@@ -17,7 +17,7 @@ function InitBtn(){
 		$("#BtnPrint").click(function(){
 			try{
 				var urlPrint=ObtieneContex()+'/printCheque';
-				$("#DivPrintChequ").load(urlPrint,{'bsfOper':''},function(){
+				$("#DivPrintChequ").load(urlPrint,{'BSFOPERADOR':''},function(){
 					
 				});
 			}catch(msg){

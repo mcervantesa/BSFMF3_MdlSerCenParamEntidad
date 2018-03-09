@@ -6,7 +6,7 @@ $(document).ready(function(){
 function InitBtn(){
 	$("#BtnPrint").click(function(){
 		var urlPrint =ObtieneContex()+'/PrintConsTabRef';
-		$("#divPrintConsTabRef").load(urlPrint,{'bsfOper':''},function(){
+		$("#divPrintConsTabRef").load(urlPrint,{'BSFOPERADOR':''},function(){
 			
 		});
 	});

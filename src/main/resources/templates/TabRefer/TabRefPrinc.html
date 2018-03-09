@@ -12,6 +12,13 @@
 		<th:block th:include="Messages/alertaError :: alerta"></th:block>
 		<th:block th:include="Messages/alertaExito :: alerta"></th:block>
 		<th:block th:include="Messages/alertaConfirmacion :: alerta"></th:block>
+		
+
+<form id="frmEnv" method="post" >
+	<input id="BsOperad" th:value="${BSFOPERADOR}" name="BSFOPERADOR"  hidden="hidden" />
+</form>
+		
+		
 	<div class="container_48">
 		<div class="contenedor">
 			<div class="contenedor-form">
@@ -60,9 +67,9 @@
 										    <span class="glyphicon glyphicon-align-justify"></span> Menú 
 										  </button>
 										  <ul class="dropdown-menu" role="menu">
-										  	<li style="padding: 1px;margin-left: 15px"><span class="label_gris"><a href="#">Auditoria</a> </span> </li>
-										  	<li style="padding: 1px;margin-left: 15px"><span class="label_gris"><a href="#">Tablas Asociadas</a> </span> </li>
-										  	<li style="padding: 1px;margin-left: 15px"><span class="label_gris"><a href="#">Centros Autorizados</a> </span> </li>
+										  	<li style="padding: 1px;margin-left: 15px"><span class="label_gris"><a href="#" onclick="EnviaForm('ListAudit')">Auditoria</a> </span> </li>
+										  	<li style="padding: 1px;margin-left: 15px"><span class="label_gris"><a href="#" onclick="EnviaForm('ConsTabAsoc')">Tablas Asociadas</a> </span> </li>
+										  	<li style="padding: 1px;margin-left: 15px"><span class="label_gris"><a href="#" onclick="EnviaForm('MantCentrAut')">Centros Autorizados</a> </span> </li>
 										  </ul>
 										</div>																		
 										<!-- End Boton  -->

@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 function InitTable(){
 	var urlList=ObtieneContex()+'/FindListAudLiquid';
-	$("#divBusqListAudP").load(urlList,{'bsfOper':''},function(){
+	$("#divBusqListAudP").load(urlList,{'BSFOPERADOR':''},function(){
 		AplicTabl('tblDetallListAud');
 	});
 }
@@ -15,7 +15,7 @@ function InitBtn(){
 	try{
 		$("#BtnPrint").click(function(){
 			var urlPrint =ObtieneContex()+'/PrintListAudLiquid';
-			$("#divPrintListAudLiquid").load(urlPrint,{'bsfOper':''},function(){
+			$("#divPrintListAudLiquid").load(urlPrint,{'BSFOPERADOR':''},function(){
 				
 			});
 		});

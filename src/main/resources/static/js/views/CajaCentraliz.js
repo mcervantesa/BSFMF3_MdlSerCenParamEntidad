@@ -8,7 +8,7 @@ function InitBtn(){
 		$("#BtnPrint").click(function(){
 			try{
 				var urlPrint=ObtieneContex()+'/printParamEnt';
-				$("#DivPrintParamEnt").load(urlPrint,{'bsfOper':''},function(){
+				$("#DivPrintParamEnt").load(urlPrint,{'BSFOPERADOR':''},function(){
 					
 				});
 			}catch(msg){

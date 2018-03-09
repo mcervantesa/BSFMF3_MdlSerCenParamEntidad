@@ -7,7 +7,7 @@ function InitBtn(){
 	$("#BtnPrint").click(function(){
 		try{
 			var urlPrint=ObtieneContex()+'/PrintSelecAmpFil';
-			$("#DivPrintSelecAmpFil").load(urlPrint,{'bsfOper':''},function(){
+			$("#DivPrintSelecAmpFil").load(urlPrint,{'BSFOPERADOR':''},function(){
 				
 			});
 		}catch(msg){
@@ -17,7 +17,7 @@ function InitBtn(){
 	
 	$("#btnFindSelecAmp").click(function(){
 		var urlDet=ObtieneContex()+'/DetSelecAmpFil';
-		$("#DivDetSelecAmpFil").load(urlDet,{'bsfOper':''},function(){
+		$("#DivDetSelecAmpFil").load(urlDet,{'BSFOPERADOR':''},function(){
 			AplicTabl('tblDetallSelecAm');
 		});
 	});

@@ -12,9 +12,9 @@ import mx.appwhere.remittances.front.application.constants.ViewsLocation;
 public class PeriodosController {
 
 	@PostMapping(value ="/periodos")
-	public ModelAndView getPeriodoView() {
+	public ModelAndView getPeriodoView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.PERIODOS_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 }

@@ -10,9 +10,9 @@ import mx.appwhere.remittances.front.application.constants.ViewsLocation;
 @RestController
 public class DudosidadController {
 	@RequestMapping(value = "/Dudosidad", method = RequestMethod.POST)
-	public ModelAndView getDudosidadView(String bsfOper) {
+	public ModelAndView getDudosidadView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.DUDOSIDAD_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 }

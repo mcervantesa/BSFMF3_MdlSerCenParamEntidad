@@ -12,14 +12,14 @@ import mx.appwhere.remittances.front.application.constants.ViewsLocation;
 public class CajaCentralizadController {
 
 	@PostMapping(value ="/cajacentraliz")
-	public ModelAndView getCajaCentralizView() {
+	public ModelAndView getCajaCentralizView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.CAJACENTRALIZ_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "printParamEnt", method = RequestMethod.POST)
-	public ModelAndView getprintParamEntView(String bsfOper) {
+	public ModelAndView getprintParamEntView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.PRINTPARAMENTID_VIEW);
         //mav.addObject("BSFOPERADOR", bsfOperador);
         return mav;

@@ -11,23 +11,23 @@ import mx.appwhere.remittances.front.application.constants.ViewsLocation;
 public class CoincidenciasTitularController {
 
 	@RequestMapping(value = "/ListGrupLin", method = RequestMethod.POST)
-	public ModelAndView getListGrupLinView(String bsfOper) {
+	public ModelAndView getListGrupLinView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.COINCID_LISTGRIP_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "/CoincidTitul", method = RequestMethod.POST)
-	public ModelAndView getCoincidTitulView(String bsfOper) {
+	public ModelAndView getCoincidTitulView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.COINCIDTITUD_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "/detallCoinTitu", method = RequestMethod.POST)
-	public ModelAndView getdetallCoinTituView(String bsfOper) {
+	public ModelAndView getdetallCoinTituView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.COINCIDTITUD_DET_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 }

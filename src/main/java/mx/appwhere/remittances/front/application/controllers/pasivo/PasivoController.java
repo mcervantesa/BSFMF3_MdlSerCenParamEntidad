@@ -11,30 +11,30 @@ import mx.appwhere.remittances.front.application.constants.ViewsLocation;
 @RestController
 public class PasivoController {
 	@PostMapping(value ="/prioridCargo")
-	public ModelAndView getprioridCargoView() {
+	public ModelAndView getprioridCargoView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.PASIVPRIORCARGO_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "printPriorCargo", method = RequestMethod.POST)
-	public ModelAndView getprintPriorCargodView(String bsfOper) {
+	public ModelAndView getprintPriorCargodView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.PRINTPRIORCARGO_VIEW);
         //mav.addObject("BSFOPERADOR", bsfOperador);
         return mav;
     }
 	
 	@RequestMapping(value = "/PasGenerales", method = RequestMethod.POST)
-	public ModelAndView getPasGeneralesView(String bsfOper) {
+	public ModelAndView getPasGeneralesView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.PASIVGENERAL_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 	
 	@RequestMapping(value = "/PasAportaciones", method = RequestMethod.POST)
-	public ModelAndView getPasAportacionesView(String bsfOper) {
+	public ModelAndView getPasAportacionesView(String BSFOPERADOR) {
         ModelAndView mav = new ModelAndView(ViewsLocation.PASIVAPORTACIONES_VIEW);
-        //mav.addObject("BSFOPERADOR", bsfOperador);
+        mav.addObject("BSFOPERADOR", BSFOPERADOR);
         return mav;
     }
 }
